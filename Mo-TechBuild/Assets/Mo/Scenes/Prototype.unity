@@ -2883,8 +2883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalItemsToCollect: 5
   uiText: {fileID: 1642765911}
-  hiddenObject: {fileID: 0}
-  activationZone: {fileID: 0}
+  hiddenObject: {fileID: 1610424169}
+  activationZone: {fileID: 513420002}
   activationZoneRadius: 2
 --- !u!4 &1466450416 stripped
 Transform:
