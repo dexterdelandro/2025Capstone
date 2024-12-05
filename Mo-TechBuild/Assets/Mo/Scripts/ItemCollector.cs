@@ -3,33 +3,34 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalItemsToCollect = 5; // ×Ü¹²ĞèÒªÊÕ¼¯µÄÎïÌåÊıÁ¿
-    private int currentCollectedItems = 0; // µ±Ç°ÒÑÊÕ¼¯µÄÊıÁ¿
-    public Text uiText; // ÓÃÓÚÏÔÊ¾ÊÕ¼¯½ø¶ÈµÄUIÎÄ±¾
-    public GameObject hiddenObject; // Òş²ØµÄÎïÌå
-    public Transform activationZone; // ÌØ¶¨ÇøÓòµÄ´¥·¢µã
-    public float activationZoneRadius = 2f; // ÌØ¶¨ÇøÓòµÄ¼ì²â°ë¾¶
-    private bool canActivate = false; // ÊÇ·ñ¿ÉÒÔ¼¤»îÒş²ØÎïÌå
+    public int totalItemsToCollect = 5; // ï¿½Ü¹ï¿½ï¿½ï¿½Òªï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private int currentCollectedItems = 0; // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Text uiText; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½Èµï¿½UIï¿½Ä±ï¿½
+    public GameObject hiddenObject; // ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+    public Transform activationZone; // ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
+    public float activationZoneRadius = 2f; // ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ë¾¶
+    private bool canActivate = false; // ï¿½Ç·ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
+    public CompanionFollow companion;
     void Start()
     {
         UpdateUI();
         if (hiddenObject != null)
         {
-            hiddenObject.SetActive(false); // È·±£ÎïÌå³õÊ¼ÎªÒş²Ø×´Ì¬
+            hiddenObject.SetActive(false); // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Îªï¿½ï¿½ï¿½ï¿½×´Ì¬
         }
     }
 
     void Update()
     {
-        // ¼ì²âÍæ¼ÒÊÇ·ñÔÚÌØ¶¨ÇøÓò²¢°´ÏÂ E ¼ü
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ò²¢°ï¿½ï¿½ï¿½ E ï¿½ï¿½
         if (canActivate && Input.GetKeyDown(KeyCode.E))
         {
             ActivateHiddenObject();
         }
     }
 
-    // ¸üĞÂUIÏÔÊ¾
+    // ï¿½ï¿½ï¿½ï¿½UIï¿½ï¿½Ê¾
     void UpdateUI()
     {
         if (uiText != null)
@@ -38,10 +39,11 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
-    // ÊÕ¼¯ÎïÌåµÄ·½·¨
+    // ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     public void CollectItem()
     {
         currentCollectedItems++;
+        if(companion!=null)companion.UpdateNumCollectedSprites(currentCollectedItems);
         UpdateUI();
 
         if (currentCollectedItems >= totalItemsToCollect)
@@ -51,41 +53,42 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
-    // ¼¤»îÒş²ØÎïÌå
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     void ActivateHiddenObject()
     {
         if (hiddenObject != null)
         {
-            hiddenObject.SetActive(true); // ÏÔÊ¾Òş²ØÎïÌå
+            hiddenObject.SetActive(true); // ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Debug.Log("Hidden object is now visible!");
             ClearProgress();
         }
     }
 
-    // Çå¿ÕÊÕ¼¯½ø¶È
+    // ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½
     void ClearProgress()
     {
         currentCollectedItems = 0;
+        if(companion!=null)companion.UpdateNumCollectedSprites(currentCollectedItems);
         UpdateUI();
-        canActivate = false; // ÖØÖÃ¼¤»î×´Ì¬
+        canActivate = false; // ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½×´Ì¬
     }
 
-    // Åö×²´¥·¢Æ÷£¬ÓÃÓÚ¼ì²âÊÕ¼¯ÎïÌå
+    // ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Collectible"))
         {
-            CollectItem(); // µ÷ÓÃÊÕ¼¯ÎïÌåµÄ·½·¨
-            Destroy(other.gameObject); // Ïú»Ù±»ÊÕ¼¯µÄÎïÌå
+            CollectItem(); // ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+            Destroy(other.gameObject); // ï¿½ï¿½ï¿½Ù±ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
     }
 
-    // ¼ì²âÍæ¼ÒÊÇ·ñÔÚ¼¤»îÇøÓò
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && canActivate)
         {
-            // ÅĞ¶ÏÍæ¼ÒÊÇ·ñÔÚÌØ¶¨ÇøÓòµÄ·¶Î§ÄÚ
+            // ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½
             if (Vector3.Distance(other.transform.position, activationZone.position) <= activationZoneRadius)
             {
                 Debug.Log("Press 'E' to activate the hidden object.");

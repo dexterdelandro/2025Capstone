@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,8 +16,12 @@ public class CompanionFollow : MonoBehaviour
 
     public GameObject player;
 
-    public float movementSpeed;
+    public ParticleSystem particesystem;
 
+    [SerializeField]
+    private float movementSpeed;
+
+    public float StartingMoveSpeed;
     public float minStartDistance; //the distance away from player to START following
 
     public float minEndDistance;
@@ -28,13 +33,28 @@ public class CompanionFollow : MonoBehaviour
     NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        movementSpeed = StartingMoveSpeed;
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    public void UpdateNumCollectedSprites(int num){
+        if(num==5){
+            if(!particesystem.isPlaying)particesystem.Play();
+        }else{
+            if(particesystem.isPlaying)particesystem.Stop();
+        }
+        if(num>0){
+            movementSpeed = (1.0f-(num*0.1f))*StartingMoveSpeed;
+        }else{
+            movementSpeed = StartingMoveSpeed;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        agent.speed = movementSpeed;
         currDistance = Vector3.Distance(transform.position, player.transform.position);
 
 
@@ -42,7 +62,6 @@ public class CompanionFollow : MonoBehaviour
         if(currDistance>minStartDistance){
             currentAction = CurrentAction.Following;
             Vector3 targetLocation = player.transform.position + Random.insideUnitSphere*endLocationRadius;
-            agent.speed = movementSpeed;
             agent.SetDestination(targetLocation);
 
         }else{
