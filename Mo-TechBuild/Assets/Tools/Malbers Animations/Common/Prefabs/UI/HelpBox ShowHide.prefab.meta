@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11bfe2671f948a34a80b81974c109548
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/UI/HelpBox ShowHide.prefab
+  uploadId: 709915

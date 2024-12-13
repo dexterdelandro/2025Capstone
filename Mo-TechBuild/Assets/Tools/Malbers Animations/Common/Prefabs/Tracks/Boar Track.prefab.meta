@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd90d782f7a52df40bd303ab9837be87
+timeCreated: 1487184140
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Tracks/Boar Track.prefab
+  uploadId: 709915

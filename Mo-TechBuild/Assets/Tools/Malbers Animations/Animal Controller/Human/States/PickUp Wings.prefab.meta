@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 19c415aa6a36ce64c982d14272008c44
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Animal Controller/Human/States/PickUp Wings.prefab
+  uploadId: 709915

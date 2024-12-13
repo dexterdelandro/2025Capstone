@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19dc463c5fa788b498e79eb9a079c522
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Assets/Timeline Off.signal
+  uploadId: 709915

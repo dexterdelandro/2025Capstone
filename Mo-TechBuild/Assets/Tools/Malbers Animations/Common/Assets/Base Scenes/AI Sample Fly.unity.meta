@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f7355cf9a70d624bb72c99f223eaaca
+timeCreated: 1489345377
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Assets/Base Scenes/AI Sample Fly.unity
+  uploadId: 709915

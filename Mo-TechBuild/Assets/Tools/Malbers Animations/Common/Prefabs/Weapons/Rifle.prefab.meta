@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2d4c8c4f2e5c4f24bb7c1c0e5e8eafc9
+labels:
+- Weapon
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Rifle.prefab
+  uploadId: 709915

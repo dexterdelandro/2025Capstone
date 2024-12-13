@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 013fbd2c94e55c544967e786eec818de
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Animal Controller/Human/States/Human Death
+    Ragdoll.asset
+  uploadId: 709915

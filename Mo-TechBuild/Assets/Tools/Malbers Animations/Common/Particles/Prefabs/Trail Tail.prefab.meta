@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bef3ee7317d53a14b80b560ba853dc9a
+timeCreated: 1510180880
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Particles/Prefabs/Trail Tail.prefab
+  uploadId: 709915

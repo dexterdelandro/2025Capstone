@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fe2040953ec7f8b40b3d5ecd1b2ce663
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Game Logic/Stamina Data.prefab
+  uploadId: 709915

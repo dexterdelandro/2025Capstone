@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c0fc8ba21374b54ca47a579d26206c3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Coins/Coins Default.asset
+  uploadId: 709915

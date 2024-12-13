@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eb1a926df449dec44b3babf9fa845a73
+labels:
+- Weapon
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Bow RHanded.prefab
+  uploadId: 709915

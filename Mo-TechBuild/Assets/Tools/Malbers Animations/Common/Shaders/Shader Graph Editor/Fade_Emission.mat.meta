@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f938c82438630534dbb267c298282e17
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Shaders/Shader Graph Editor/Fade_Emission.mat
+  uploadId: 709915

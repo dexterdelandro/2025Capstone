@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b8d915d3c8fbbe1488178a3cb0d897bd
+timeCreated: 1495738790
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Physic Materials/Metal.physicMaterial
+  uploadId: 709915

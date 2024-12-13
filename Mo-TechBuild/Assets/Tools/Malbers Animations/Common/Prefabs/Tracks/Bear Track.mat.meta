@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c3934699a5c10d94f8054ee6080b0727
+timeCreated: 1483637705
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Tracks/Bear Track.mat
+  uploadId: 709915

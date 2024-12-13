@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e5b19c66f5359ff45963eb6b55cde68d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Cinemachine/Set Camera States/CM Mount
+    Camera State.prefab
+  uploadId: 709915

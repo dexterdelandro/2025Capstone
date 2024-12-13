@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f5cbf9f07429736478d353b1cb49d847
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Scriptable Assets/IDs/Layers/Ground
+    Layer.asset
+  uploadId: 709915

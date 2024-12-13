@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c5ef17be145ba024d9e0d8c89ed06690
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Stats/UI/Enemy Health Bar.prefab
+  uploadId: 709915

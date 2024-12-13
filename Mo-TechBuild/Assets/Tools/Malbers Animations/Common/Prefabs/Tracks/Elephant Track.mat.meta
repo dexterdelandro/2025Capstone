@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ee3b08ef807e2324b983b068d9fb554c
+timeCreated: 1483637705
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Tracks/Elephant Track.mat
+  uploadId: 709915

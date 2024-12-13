@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e2ce313b33b57734f81adb5644985836
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/UI/GamePad UI/GamePad DPad
+    North.prefab
+  uploadId: 709915

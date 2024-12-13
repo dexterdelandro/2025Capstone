@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fd94c1920c197849b8938c181d53a5c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Weapon IK/Throw_IKProfile.asset
+  uploadId: 709915

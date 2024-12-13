@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b8b1fb7775b90a14692b4295d424589f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Mobile Input/Mobile JoyStick
+    (Camera).prefab
+  uploadId: 709915
