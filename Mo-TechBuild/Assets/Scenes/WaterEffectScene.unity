@@ -3102,8 +3102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6377757588031998091}
+  - component: {fileID: 6377757588031998093}
+  - component: {fileID: 6377757588031998092}
   m_Layer: 0
-  m_Name: Content
+  m_Name: Bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3547,15 +3549,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807827458942355889}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.28747523, y: 0.5049311, z: -0.29770413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.19500381, y: 0.27363205, z: 0.10186806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1409611225044208006}
   - {fileID: 125977158090880813}
   - {fileID: 1882778240629904192}
-  m_Father: {fileID: 5851172097774804785}
+  m_Father: {fileID: 6377757588031998091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2294167481703743791
 MeshRenderer:
@@ -4490,7 +4492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 2
 --- !u!4 &5168865252176948878
 Transform:
   m_ObjectHideFlags: 0
@@ -4519,7 +4521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 2
 --- !u!23 &5243695563782466739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4702,7 +4704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 2
 --- !u!1 &5550768396301190603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4814,6 @@ Transform:
   m_Children:
   - {fileID: 5084873957428548630}
   - {fileID: 6377757588031998091}
-  - {fileID: 2290603617824983061}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6038987286259569820
@@ -4949,8 +4950,45 @@ Transform:
   - {fileID: 5049863594088365979}
   - {fileID: 5288794084127954461}
   - {fileID: 226647316461326702}
+  - {fileID: 2290603617824983061}
   m_Father: {fileID: 5851172097774804785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &6377757588031998092
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195954115152229586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &6377757588031998093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195954115152229586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d150bbb4cfa6d6e40b072e7e1d2c0be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
 --- !u!1 &6460385892228001365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,7 +5141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 2
 --- !u!1 &6823810520207559505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,7 +5259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 2
 --- !u!1 &7277184588080985729
 GameObject:
   m_ObjectHideFlags: 0
