@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RoughGlass(IOR)
+  m_Shader: {fileID: 4800000, guid: 9ecf50081160c314ab71626f0f23ed7c, type: 3}
+  m_ShaderKeywords: _USEROUGHNESS_ON _USESMOOTHNESS_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BrushedMetalNormal1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: e56004e54fa71164f9009164f616a651, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: 5bd3dde6ef6012d4fabbbeddb40d6a4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f7384abe3f16b45478ed1e80abf9ca5c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 8994e881230f6534087d9459e6c0e775, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 66d9a7cffc6f2de43895a48268e7a8b7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AoIntensity: 0
+    - _BlurReflection: 0
+    - _Brighter: 0
+    - _Brightness: 2
+    - _BumpScale: 20
+    - _BumpScaleDecal: 0.1
+    - _BumpScaleDecal1: 0
+    - _ChromaticAberration: 0.01
+    - _Cutoff: 0.5
+    - _Depth: -4
+    - _DetailNormalMapScale: 1
+    - _Distortion: 0.211
+    - _Distortion1: 0.3
+    - _DstBlend: 0
+    - _EmissionIntensity: 1
+    - _EmissiveIntensity: 1
+    - _EnableRotation1: 0
+    - _FalloffOpacity: 0
+    - _FalloffOpacity1: 0
+    - _FalloffOpacityIntensity: 0.799
+    - _Float7: 1
+    - _FresnelStrength: 1.48
+    - _GlossMapScale: 1
+    - _Glossiness: 1
+    - _GlossinessDecal: 0.5
+    - _GlossyReflections: 1
+    - _Gradient1: 0.853
+    - _IndexofRefraction: 1.1
+    - _Invert: 0
+    - _InvertAlbedoA: 0
+    - _Metallic: 0
+    - _MetallicDecal: 0.2
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Opacity: 0.49
+    - _Parallax: 0.02
+    - _Power1: 2
+    - _PowerFalloffOpacity: 1
+    - _PowerFresnel: 1
+    - _ReflectionDecal: 0
+    - _ReflectionIntensity: 1
+    - _RefractionAmount: 8.71
+    - _Rotation: 0
+    - _Rotation1: 0
+    - _RotationSpeed: 1
+    - _RotationSpeed1: 1
+    - _Saturation: 1
+    - _SaturationDecal: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UVSec: 0
+    - _UseAlbedoA: 0
+    - _UseAlbedoA1: 0
+    - _UseCubemap: 1
+    - _UseRoughness: 1
+    - _UseSmoothness: 1
+    - _ZWrite: 1
+    - __dirty: 1
+    - _x: 1
+    - _y: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorCubemap: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorDecal: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Vector0: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector1: {r: 0, g: 0, b: 0, a: 0}

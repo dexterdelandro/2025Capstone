@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a105aa17dd2c72042a8938e729baf725
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/Readme.txt
+  uploadId: 641315

@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pig
+  m_Shader: {fileID: 4800000, guid: 4ae935bab0143fe4ab16d7e7f9a13579, type: 3}
+  m_ShaderKeywords: _FALLOFFOPACITY_ON _FRESNELONOFF_ON _USECUBEMAP_OFF
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: aa7fff2d9a6b0f44da470ba9f8e04897, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: 5bd3dde6ef6012d4fabbbeddb40d6a4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 01b4c3606d0ba254d9465b70049f62ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Ambientlight: 1
+    - _AoIntensity: 0
+    - _BlurReflection: 0
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _BumpScaleDecal: 0.1
+    - _BumpScaleDecal1: 0
+    - _ChromaticAberration: 0
+    - _Cull: 2
+    - _EmissionIntensity: 1
+    - _EmissiveIntensity: 1
+    - _Fade: 0
+    - _FalloffFade: 0
+    - _FalloffFade1: 0
+    - _FalloffOpacity: 1
+    - _FalloffOpacityIntensity: 0.497
+    - _FresnelStrength: 0.5
+    - _Glossiness: 0
+    - _GlossinessDecal: 0.5
+    - _Gradient1: 0.724
+    - _GradientFade: 1
+    - _IndexofRefraction: 1
+    - _Intensity: 1
+    - _Invert: 0
+    - _InvertAlbedoA: 0
+    - _InvertAlbedoA1: 0
+    - _InvertFresnelFade: 0
+    - _Metallic: 0
+    - _MetallicDecal: 0.2
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Opacity: 0.252
+    - _Power1: 2
+    - _PowerFalloffFade: 0.5
+    - _PowerFalloffOpacity: 2.29
+    - _PowerFresnel: 0.81
+    - _ReflectionDecal: 0
+    - _ReflectionIntensity: 1
+    - _Refraction: 1.2
+    - _Rotation: 0
+    - _Saturation: 0
+    - _SaturationDecal: 0
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UseAlbedoA: 0
+    - _UseAlbedoA1: 0
+    - _UseCubemap: 0
+    - _UseSmoothness: 0
+    - _Weight: 1
+    - _ZWrite: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDecal: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorFresnel1: {r: 0.8962264, g: 0, b: 0.7196971, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0b1beb2ce9a8b1e4f90fbf58dc74a1f5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/_Shared Files/3D Props/Studio/Shader Ball/Textures/SB_Base
+    Inside.mat
+  uploadId: 641315

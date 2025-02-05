@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Drink Glass_Wine2
+  m_Shader: {fileID: 4800000, guid: 9ecf50081160c314ab71626f0f23ed7c, type: 3}
+  m_ShaderKeywords: _FALLOFFOPACITY_ON _FRESNELONOFF_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 25b7926526f09eb4994dc3a53714f60f, type: 3}
+        m_Scale: {x: 0.52, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: ce32ef9e6d0d40a48994a1fd064852d5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambientlight: 1
+    - _AoIntensity: 0
+    - _BlurReflection: 0
+    - _Brightness: 1
+    - _BumpScale: 0
+    - _BumpScaleDecal: 0.1
+    - _BumpScaleDecal1: 0
+    - _ChromaticAberration: 0.037
+    - _EmissiveIntensity: 1
+    - _FalloffOpacity: 1
+    - _FresnelStrength: 0.4
+    - _Glossiness: 1
+    - _GlossinessDecal: 0.5
+    - _Gradient1: 0.682
+    - _IndexofRefraction: 1.33
+    - _Invert: 0
+    - _InvertAlbedoA: 0
+    - _Metallic: 0.1
+    - _MetallicDecal: 0.2
+    - _Opacity: 0.607
+    - _Power1: 1.37
+    - _ReflectionDecal: 0
+    - _ReflectionIntensity: 0.22
+    - _Rotation: 0
+    - _Saturation: 0
+    - _SaturationDecal: 0
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UseAlbedoA: 0
+    - _UseSmoothness: 0
+    - _Weight: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDecal: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}

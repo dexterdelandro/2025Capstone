@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0b49ddf26c8c76742952fee2944da2b4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/_Prefabs/Pig.prefab
+  uploadId: 641315

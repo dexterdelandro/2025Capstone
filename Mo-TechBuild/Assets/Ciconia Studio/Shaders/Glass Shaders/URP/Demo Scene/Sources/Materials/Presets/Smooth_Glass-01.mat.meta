@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fe343f1adcb1fd74eb89f0f7a4407d96
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Materials/Presets/Smooth_Glass-01.mat
+  uploadId: 641315
