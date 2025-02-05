@@ -30,6 +30,7 @@ public class ItemCollector : MonoBehaviour
         {
             hiddenObjectZone2.SetActive(true);
         }
+       
     }
 
     void Update()
