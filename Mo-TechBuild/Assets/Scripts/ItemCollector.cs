@@ -3,135 +3,88 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalItemsToCollectZone1 = 5;
-    public int totalItemsToCollectZone2 = 3;
-    public int currentCollectedItemsZone1 = 0;
-    public int currentCollectedItemsZone2 = 0;
-    public Text uiTextZone1;
-    public Text uiTextZone2;
-    public GameObject hiddenObjectZone1;
-    public GameObject hiddenObjectZone2;
-    public Transform activationZone1;
-    public Transform activationZone2;
-    public float activationZoneRadius = 2f;
-    private bool canActivateZone1 = false;
-    private bool canActivateZone2 = false;
+    public int totalCollectedSpirits = 0; 
+    public int requiredSpiritsForEarthAbility = 3; 
+    public Text spiritUIText; 
 
-    public CompanionFollow companion;
+    public AudioClip spiritCollectSound; 
+    private AudioSource audioSource; 
+
+    private bool canCollectSpirit = false;
+    private Spirit currentSpirit;
 
     void Start()
     {
-        if (hiddenObjectZone1 != null)
+        // 获取玩家的 AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
         {
-            hiddenObjectZone1.SetActive(false);
+            Debug.LogError("ItemCollector: No AudioSource found on Player! Add one to play sounds.");
         }
-
-        if (hiddenObjectZone2 != null)
-        {
-            hiddenObjectZone2.SetActive(true);
-        }
-       
     }
 
     void Update()
     {
-        if (canActivateZone1 && Input.GetKeyDown(KeyCode.E))
+        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
         {
-            ActivateHiddenObjectZone1();
-        }
-
-        if (canActivateZone2 && Input.GetKeyDown(KeyCode.E))
-        {
-            ActivateHiddenObjectZone2();
+            CollectSpirit();
         }
     }
 
-    void UpdateUI(Text uiText, int currentCollected, int totalToCollect)
+    private void CollectSpirit()
     {
-        if (uiText != null)
+        if (currentSpirit != null)
         {
-            uiText.text = "Collected: " + currentCollected + " / " + totalToCollect;
-        }
-    }
+            totalCollectedSpirits++;
+            UpdateSpiritUI();
 
-    public void CollectItemForZone1()
-    {
-        currentCollectedItemsZone1++;
-        GetComponent<AudioSource>().Play();
-        if (companion != null) companion.UpdateNumCollectedSprites(currentCollectedItemsZone1);
-
-        UpdateUI(uiTextZone1, currentCollectedItemsZone1, totalItemsToCollectZone1);
-
-        if (currentCollectedItemsZone1 >= totalItemsToCollectZone1)
-        {
-            canActivateZone1 = true;
-            Debug.Log("All items for Zone 1 collected! Go to the activation zone and press 'E'.");
-        }
-    }
-
-    public void CollectItemForZone2()
-    {
-        currentCollectedItemsZone2++;
-        GetComponent<AudioSource>().Play();
-        if (companion != null) companion.UpdateNumCollectedSprites(currentCollectedItemsZone2);
-
-        UpdateUI(uiTextZone2, currentCollectedItemsZone2, totalItemsToCollectZone2);
-
-        if (currentCollectedItemsZone2 >= totalItemsToCollectZone2)
-        {
-            canActivateZone2 = true;
-            Debug.Log("All items for Zone 2 collected! Go to the activation zone and press 'E'.");
-        }
-    }
-
-    void ActivateHiddenObjectZone1()
-    {
-        if (hiddenObjectZone1 != null)
-        {
-            hiddenObjectZone1.SetActive(true);
-            Debug.Log("Hidden object in Zone 1 is now visible!");
-            ClearProgressZone1();
-        }
-    }
-
-    void ActivateHiddenObjectZone2()
-    {
-        if (hiddenObjectZone2 != null)
-        {
-            hiddenObjectZone2.SetActive(false);
-            Debug.Log("Hidden object in Zone 2 is now hidden!");
-            ClearProgressZone2();
-        }
-    }
-
-    void ClearProgressZone1()
-    {
-        currentCollectedItemsZone1 = 0;
-        if (companion != null) companion.UpdateNumCollectedSprites(currentCollectedItemsZone1);
-        UpdateUI(uiTextZone1, currentCollectedItemsZone1, totalItemsToCollectZone1);
-        canActivateZone1 = false;
-    }
-
-    void ClearProgressZone2()
-    {
-        currentCollectedItemsZone2 = 0;
-        if (companion != null) companion.UpdateNumCollectedSprites(currentCollectedItemsZone2);
-        UpdateUI(uiTextZone2, currentCollectedItemsZone2, totalItemsToCollectZone2);
-        canActivateZone2 = false;
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (canActivateZone1 && Vector3.Distance(other.transform.position, activationZone1.position) <= activationZoneRadius)
+            // 播放 Spirit 收集音效
+            if (audioSource != null && spiritCollectSound != null)
             {
-                Debug.Log("Press 'E' to activate the hidden object in Zone 1.");
+                audioSource.PlayOneShot(spiritCollectSound);
             }
 
-            if (canActivateZone2 && Vector3.Distance(other.transform.position, activationZone2.position) <= activationZoneRadius)
+            currentSpirit.DestroySpirit();
+            currentSpirit = null;
+        }
+    }
+
+    public int GetTotalCollectedSpirits()
+    {
+        return totalCollectedSpirits;
+    }
+
+    private void UpdateSpiritUI()
+    {
+        if (spiritUIText != null)
+        {
+            spiritUIText.text = "Spirits: " + totalCollectedSpirits;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Elemental"))
+        {
+            canCollectSpirit = true;
+            currentSpirit = other.GetComponent<Spirit>();
+
+            if (currentSpirit != null)
             {
-                Debug.Log("Press 'E' to activate the hidden object in Zone 2.");
+                currentSpirit.ShowPopUp(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Elemental"))
+        {
+            canCollectSpirit = false;
+            if (currentSpirit != null)
+            {
+                currentSpirit.ShowPopUp(false);
+                currentSpirit = null;
             }
         }
     }
