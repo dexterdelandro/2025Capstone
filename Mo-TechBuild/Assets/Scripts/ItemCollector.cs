@@ -1,31 +1,33 @@
 using UnityEngine;
-using TMPro; // ÒýÈë TextMeshPro ÃüÃû¿Õ¼ä
+using TMPro; // ï¿½ï¿½ï¿½ï¿½ TextMeshPro ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalCollectedSpirits = 0; // Íæ¼ÒÊÕ¼¯µ½µÄ Spirit ×ÜÊý
-    public int currentSpiritsAvailable = 0; // Íæ¼Ò¿ÉÓÃµÄ Spirit ÊýÁ¿
+    public int totalCollectedSpirits = 0; // ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ Spirit ï¿½ï¿½ï¿½ï¿½
+    public int currentSpiritsAvailable = 5; // ï¿½ï¿½Ò¿ï¿½ï¿½Ãµï¿½ Spirit ï¿½ï¿½ï¿½ï¿½
     public TextMeshProUGUI spiritUIText; 
 
     private bool canCollectSpirit = false; 
     private Spirit currentSpirit; 
 
+    public CompanionFollow companion;
+
     [Header("Audio Settings")]
-    public AudioClip spiritCollectSound; // ÊÕ¼¯SpiritµÄÒôÐ§
-    private AudioSource audioSource; // ÓÃÓÚ²¥·ÅÒôÐ§
+    public AudioClip spiritCollectSound; // ï¿½Õ¼ï¿½Spiritï¿½ï¿½ï¿½ï¿½Ð§
+    private AudioSource audioSource; // ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>(); // Èç¹ûÃ»ÓÐ AudioSource£¬×Ô¶¯Ìí¼Ó
+            audioSource = gameObject.AddComponent<AudioSource>(); // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ AudioSourceï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
         }
     }
 
     void Update()
     {
-        // Íæ¼Ò°´ E ÊÕ¼¯ Spirit
+        // ï¿½ï¿½Ò°ï¿½ E ï¿½Õ¼ï¿½ Spirit
         if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
         {
             CollectSpirit();
@@ -36,22 +38,23 @@ public class ItemCollector : MonoBehaviour
     {
         if (currentSpirit != null)
         {
-            totalCollectedSpirits++; // Ôö¼Ó×ÜÊÕ¼¯ÊýÁ¿
-            currentSpiritsAvailable++; // Ôö¼Ó¿ÉÓÃµÄ Spirit ¼ÆÊý
+            totalCollectedSpirits++; 
+            currentSpiritsAvailable++; 
+            companion.UpdateNumCollectedSprites(currentSpiritsAvailable);
+
             UpdateSpiritUI();
 
-            // ²¥·Å Spirit ÊÕ¼¯ÒôÐ§
+            // ï¿½ï¿½ï¿½ï¿½ Spirit ï¿½Õ¼ï¿½ï¿½ï¿½Ð§
             if (spiritCollectSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(spiritCollectSound);
             }
 
-            currentSpirit.DestroySpirit(); // Ïú»Ù Spirit
+            currentSpirit.DestroySpirit(); // ï¿½ï¿½ï¿½ï¿½ Spirit
             currentSpirit = null;
         }
     }
 
-    /
     public bool CanUseEarthAbility()
     {
         return currentSpiritsAvailable > 0;
@@ -62,7 +65,8 @@ public class ItemCollector : MonoBehaviour
     {
         if (currentSpiritsAvailable > 0)
         {
-            currentSpiritsAvailable--; 
+            currentSpiritsAvailable--;
+            companion.UpdateNumCollectedSprites(currentSpiritsAvailable);
             UpdateSpiritUI();
         }
     }
@@ -89,7 +93,7 @@ public class ItemCollector : MonoBehaviour
 
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(true); // ÏÔÊ¾½»»¥ÌáÊ¾
+                currentSpirit.ShowPopUp(true); // ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
             }
         }
     }
@@ -101,7 +105,7 @@ public class ItemCollector : MonoBehaviour
             canCollectSpirit = false;
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(false); // Òþ²Ø½»»¥ÌáÊ¾
+                currentSpirit.ShowPopUp(false); // ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
                 currentSpirit = null;
             }
         }

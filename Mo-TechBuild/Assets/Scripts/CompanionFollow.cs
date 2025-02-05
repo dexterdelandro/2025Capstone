@@ -155,7 +155,7 @@ public class CompanionFollow : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.F))CheckTarget();
+        //if(Input.GetKeyDown(KeyCode.F))CheckTarget();
 
 
 

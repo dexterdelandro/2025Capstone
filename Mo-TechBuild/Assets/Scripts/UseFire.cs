@@ -3,6 +3,8 @@ using System.Collections;
 
 public class UseFire : MonoBehaviour
 {
+
+    public ItemCollector itemCollector;
     public ParticleSystem firePS;
 
     public BoxCollider flameHitBox;
@@ -18,14 +20,15 @@ public class UseFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isEmitting && Input.GetKeyDown(KeyCode.F)){
-            Debug.Log("yes yes");
+        if(!isEmitting && itemCollector.GetAvailableSpirits()>0 && Input.GetKeyDown(KeyCode.F)){
+            //Debug.Log("yes yes");
             StartCoroutine(EmmitFlames());
         }
     }
 
     private IEnumerator EmmitFlames(){
         isEmitting = true;
+        itemCollector.UseSpirit();
         firePS.Play();
         flameHitBox.enabled = true;
         yield return new WaitForSeconds(0.75f);
@@ -35,8 +38,8 @@ public class UseFire : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-        if(isEmitting && other.CompareTag("BurnDown")){
-            Debug.Log("burn baby burn");
+        if(isEmitting && other.CompareTag("Burnable")){
+            Debug.Log("HItting");
             Destroy(other.gameObject, 0.5f);
         }
     }

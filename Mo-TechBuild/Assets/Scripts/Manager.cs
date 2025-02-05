@@ -37,6 +37,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+        Cursor.lockState = CursorLockMode.None;
         EnablePause();
     }
 
@@ -75,15 +76,17 @@ public class Manager : MonoBehaviour
         gamestate = GameState.Pause;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
-        //GameUI.gameObject.SetActive(false);
+        GameUI.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(true);
     }
 
     public void ResumePlay(){
+        Debug.Log("Pressed");
+        Debug.Log(pauseCanvas);
+        pauseCanvas.gameObject.SetActive(false);
         gamestate = GameState.Playing;
+        GameUI.gameObject.SetActive(true);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
-        //GameUI.gameObject.SetActive(true);
-        pauseCanvas.gameObject.SetActive(false);
     }
 }

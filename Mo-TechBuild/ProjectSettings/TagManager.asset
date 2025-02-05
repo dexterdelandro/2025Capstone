@@ -14,6 +14,7 @@ TagManager:
   - Elemental
   - CinemachineTarget
   - BurnDown
+  - Burnable
   layers:
   - Default
   - TransparentFX
