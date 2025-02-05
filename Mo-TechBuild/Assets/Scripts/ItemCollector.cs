@@ -1,30 +1,31 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro; // 引入 TextMeshPro 命名空间
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalCollectedSpirits = 0; 
-    public int requiredSpiritsForEarthAbility = 3; 
-    public Text spiritUIText; 
+    public int totalCollectedSpirits = 0; // 玩家收集到的 Spirit 总数
+    public int currentSpiritsAvailable = 0; // 玩家可用的 Spirit 数量
+    public TextMeshProUGUI spiritUIText; 
 
-    public AudioClip spiritCollectSound; 
-    private AudioSource audioSource; 
+    private bool canCollectSpirit = false; 
+    private Spirit currentSpirit; 
 
-    private bool canCollectSpirit = false;
-    private Spirit currentSpirit;
+    [Header("Audio Settings")]
+    public AudioClip spiritCollectSound; // 收集Spirit的音效
+    private AudioSource audioSource; // 用于播放音效
 
     void Start()
     {
-        // 获取玩家的 AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            Debug.LogError("ItemCollector: No AudioSource found on Player! Add one to play sounds.");
+            audioSource = gameObject.AddComponent<AudioSource>(); // 如果没有 AudioSource，自动添加
         }
     }
 
     void Update()
     {
+        // 玩家按 E 收集 Spirit
         if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
         {
             CollectSpirit();
@@ -35,30 +36,47 @@ public class ItemCollector : MonoBehaviour
     {
         if (currentSpirit != null)
         {
-            totalCollectedSpirits++;
+            totalCollectedSpirits++; // 增加总收集数量
+            currentSpiritsAvailable++; // 增加可用的 Spirit 计数
             UpdateSpiritUI();
 
             // 播放 Spirit 收集音效
-            if (audioSource != null && spiritCollectSound != null)
+            if (spiritCollectSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(spiritCollectSound);
             }
 
-            currentSpirit.DestroySpirit();
+            currentSpirit.DestroySpirit(); // 销毁 Spirit
             currentSpirit = null;
         }
     }
 
-    public int GetTotalCollectedSpirits()
+    /
+    public bool CanUseEarthAbility()
     {
-        return totalCollectedSpirits;
+        return currentSpiritsAvailable > 0;
+    }
+
+   
+    public void UseSpirit()
+    {
+        if (currentSpiritsAvailable > 0)
+        {
+            currentSpiritsAvailable--; 
+            UpdateSpiritUI();
+        }
+    }
+
+    public int GetAvailableSpirits()
+    {
+        return currentSpiritsAvailable;
     }
 
     private void UpdateSpiritUI()
     {
         if (spiritUIText != null)
         {
-            spiritUIText.text = "Spirits: " + totalCollectedSpirits;
+            spiritUIText.text = "Spirits: " + currentSpiritsAvailable;
         }
     }
 
@@ -71,7 +89,7 @@ public class ItemCollector : MonoBehaviour
 
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(true);
+                currentSpirit.ShowPopUp(true); // 显示交互提示
             }
         }
     }
@@ -83,7 +101,7 @@ public class ItemCollector : MonoBehaviour
             canCollectSpirit = false;
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(false);
+                currentSpirit.ShowPopUp(false); // 隐藏交互提示
                 currentSpirit = null;
             }
         }

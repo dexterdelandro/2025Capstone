@@ -24,20 +24,16 @@ public class EarthPlatformSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            if (CanUseEarthAbility())
+            if (itemCollector != null && itemCollector.CanUseEarthAbility())
             {
                 TrySpawnPlatform();
+                itemCollector.UseSpirit(); // สนำร Spirit
             }
             else
             {
                 Debug.Log("Not enough Spirits collected to use Earth Ability!");
             }
         }
-    }
-
-    bool CanUseEarthAbility()
-    {
-        return itemCollector != null && itemCollector.GetTotalCollectedSpirits() >= itemCollector.requiredSpiritsForEarthAbility;
     }
 
     void TrySpawnPlatform()
