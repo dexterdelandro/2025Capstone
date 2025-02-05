@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 95186851ace7d6f4cad53efd831fe73b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _CubeMap: {fileID: 8900000, guid: 5bd3dde6ef6012d4fabbbeddb40d6a4b, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/URP - CS_SimpleGlass.shader
+  uploadId: 641315

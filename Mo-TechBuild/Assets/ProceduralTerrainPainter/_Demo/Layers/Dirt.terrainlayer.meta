@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 881e3659d09e3e144835d761c2235488
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 188357
+  packageName: Procedural Terrain Painter
+  packageVersion: 1.0.5
+  assetPath: Assets/ProceduralTerrainPainter/_Demo/Layers/Dirt.terrainlayer
+  uploadId: 712355

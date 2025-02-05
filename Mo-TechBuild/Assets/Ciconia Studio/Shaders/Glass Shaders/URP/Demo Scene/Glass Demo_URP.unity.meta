@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8d8ae7fddcea1854daa88aef28c884a5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Glass Demo_URP.unity
+  uploadId: 641315

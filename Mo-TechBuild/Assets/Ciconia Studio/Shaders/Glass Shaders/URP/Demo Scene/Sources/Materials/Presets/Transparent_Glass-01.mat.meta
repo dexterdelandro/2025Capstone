@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 65433a458b3e8934c98eb22247b5ddac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Materials/Presets/Transparent_Glass-01.mat
+  uploadId: 641315

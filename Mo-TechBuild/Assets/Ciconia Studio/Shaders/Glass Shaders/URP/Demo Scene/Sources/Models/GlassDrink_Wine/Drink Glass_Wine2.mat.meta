@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: de6c6cf932c42e446bc9708594b67572
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/GlassDrink_Wine/Drink
+    Glass_Wine2.mat
+  uploadId: 641315

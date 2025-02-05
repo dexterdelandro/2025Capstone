@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9bd59ab8b2475564aa3f2ff5c18500e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/Pig/Materials/pig_diffuse.mat
+  uploadId: 641315

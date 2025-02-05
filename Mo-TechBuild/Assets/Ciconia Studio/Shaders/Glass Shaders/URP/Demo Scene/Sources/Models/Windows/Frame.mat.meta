@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ccd55f14c2d9d8d488f415714a2e1ec1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/Windows/Frame.mat
+  uploadId: 641315

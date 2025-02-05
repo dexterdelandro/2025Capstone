@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Drink Glass_Wine_Liquid 1
+  m_Shader: {fileID: 4800000, guid: 7be0701809d43ed44b4e6ebcba0cf5f0, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _EMISSION _FRESNELONOFF_ON _NORMALMAP _USECUBEMAP_OFF
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AoIntensity: 0
+    - _BlurReflection: 0
+    - _Brightness: 1
+    - _BumpScale: 5
+    - _ChromaticAberration: 0.1
+    - _FalloffOpacity: 0
+    - _FalloffOpacityIntensity: 1
+    - _FresnelStrength: 0
+    - _Glossiness: 0.5
+    - _IndexofRefraction: 2.38
+    - _Intensity: 2.5
+    - _Invert: 0
+    - _Metallic: 0.2
+    - _Opacity: 1
+    - _PowerFalloffOpacity: 0.97
+    - _PowerFresnel: 1
+    - _ReflectionIntensity: 0
+    - _Refraction: 1
+    - _Saturation: 0
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UseCubemap: 0
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 0, g: 0, b: 0, a: 0}

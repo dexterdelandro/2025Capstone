@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grid_Glass-01
+  m_Shader: {fileID: 4800000, guid: 4ae935bab0143fe4ab16d7e7f9a13579, type: 3}
+  m_ShaderKeywords: _FALLOFFFADE1_ON _FRESNELONOFF_ON _USEALBEDOA1_ON _USEALBEDOA_ON
+    _USECUBEMAP_OFF
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: ed3a8f4c479a71f40b8be45ecf3a35ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: 8a0403f9eca8e0549b10823c36730a5d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 6bd713eea4d2a7842b378efffc979f18, type: 3}
+        m_Scale: {x: 8, y: 8}
+        m_Offset: {x: 0, y: 0.13}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: d58cfe638d610524796f4c6786677fb4, type: 3}
+        m_Scale: {x: 8, y: 8}
+        m_Offset: {x: 0, y: 0.13}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c0954b6a694c71940826434417c5738f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 0c938e6abc2eb3b46bf4f3d3b163d315, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _A: 0
+    - _AlphaCutoff: 0.5
+    - _Ambientlight: 1
+    - _AoIntensity: 0
+    - _BlurReflection: 0
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _BumpScaleDecal: 1
+    - _BumpScaleDecal1: 0
+    - _ChromaticAberration: 0.03
+    - _Cull: 2
+    - _EmissionIntensity: 1
+    - _EmissiveIntensity: 0.2
+    - _Fade: 0
+    - _FalloffFade: 0
+    - _FalloffFade1: 1
+    - _FalloffOpacity: 0
+    - _FalloffOpacityIntensity: 1
+    - _FresnelStrength: 1
+    - _Glossiness: 1
+    - _GlossinessDecal: 0
+    - _Gradient1: 0.918
+    - _GradientFade: 1
+    - _IndexofRefraction: 1.51
+    - _Intensity: 1
+    - _Invert: 0
+    - _InvertAlbedoA: 0
+    - _InvertAlbedoA1: 0
+    - _InvertAlbedoAFade: 0
+    - _InvertFresnelFade: 0
+    - _Keyword0: 0
+    - _Metallic: 0.644
+    - _MetallicDecal: 0
+    - _OffsetX: 0
+    - _OffsetX1: 0
+    - _OffsetY: 0
+    - _OffsetY1: 0
+    - _Opacity: 0
+    - _Power1: 1.51
+    - _PowerFade: 1
+    - _PowerFalloffFade: 1
+    - _PowerFalloffOpacity: 1
+    - _PowerFresnel: 0.81
+    - _ReflectionDecal: 0
+    - _ReflectionIntensity: 1
+    - _Refraction: 1
+    - _Rotation: 90
+    - _Saturation: 0
+    - _SaturationDecal: 0
+    - _SelfIllumination: 1
+    - _SmoothnessTextureChannel: 0
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _TilingX: 4
+    - _TilingY: 4
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.5
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 1
+    - _TransmissionShadow: 0.5
+    - _UseAlbedoA: 1
+    - _UseAlbedoA1: 1
+    - _UseAlbedoAFade: 0
+    - _UseCubemap: 0
+    - _UseSmoothness: 0
+    - _Weight: 1
+    - _YOffset: 0.24
+    - _ZWrite: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color0: {r: 0.990566, g: 0.91486794, b: 0.098122105, a: 0}
+    - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDecal: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorFresnel1: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 0}
+    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}

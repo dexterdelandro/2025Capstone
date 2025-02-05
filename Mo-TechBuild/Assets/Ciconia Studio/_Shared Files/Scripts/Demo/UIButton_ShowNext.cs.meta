@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 09c459dc70065c541a7e3b5d7ccbd6f1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/_Shared Files/Scripts/Demo/UIButton_ShowNext.cs
+  uploadId: 641315

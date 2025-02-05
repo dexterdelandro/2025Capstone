@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1064f9c574e4311439c8d6eab1d0f5ab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/Bottle
+    Hadouken/Bottle Hadouken_Liquid.mat
+  uploadId: 641315

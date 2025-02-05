@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f8b3e23a7344734f90a897103d4bf91
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/_Prefabs/GlassDrink_Beer_LP.prefab
+  uploadId: 641315

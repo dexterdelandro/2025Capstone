@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 5745d9aca623df240b941c22f400ce1c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Cochonhead
+    100002: Cochonjaw
+    100004: CochonLear
+    100006: CochonlearBone001
+    100008: CochonLeye
+    100010: CochonLeyelidDown
+    100012: CochonLeyelidUp
+    100014: CochonLLeg1
+    100016: CochonLLeg1Back
+    100018: CochonLLeg2
+    100020: CochonLLeg2Back
+    100022: CochonLLegAnkle
+    100024: CochonLLegAnkleBack
+    100026: CochonLLegDigit11
+    100028: CochonLLegDigit11Back
+    100030: CochonNeck1
+    100032: CochonNeck2
+    100034: CochonNose
+    100036: CochonNoseBone001
+    100038: CochonPelvis
+    100040: Cochonpelvis02
+    100042: CochonRear
+    100044: CochonRearBone001
+    100046: CochonReye
+    100048: CochonReyelidDown
+    100050: CochonReyelidUp
+    100052: CochonRibs
+    100054: CochonRLeg1
+    100056: CochonRLeg1Back
+    100058: CochonRLeg2
+    100060: CochonRLeg2Back
+    100062: CochonRLegAnkle
+    100064: CochonRLegAnkleBack
+    100066: CochonRLegDigit11
+    100068: CochonRLegDigit11Back
+    100070: CochonSpine1
+    100072: CochonSpine2
+    100074: CochonSpine3
+    100076: CochonTail1
+    100078: CochonTail2
+    100080: CochonTail3
+    100082: Cochontongue
+    100084: CochontongueBone001
+    100086: low_pig_body
+    100088: low_pig_dents_inf
+    100090: low_pig_dents_sup
+    100092: low_pig_eyeD
+    100094: low_pig_eyeG
+    100096: low_pig_tongue
+    100098: //RootNode
+    400000: Cochonhead
+    400002: Cochonjaw
+    400004: CochonLear
+    400006: CochonlearBone001
+    400008: CochonLeye
+    400010: CochonLeyelidDown
+    400012: CochonLeyelidUp
+    400014: CochonLLeg1
+    400016: CochonLLeg1Back
+    400018: CochonLLeg2
+    400020: CochonLLeg2Back
+    400022: CochonLLegAnkle
+    400024: CochonLLegAnkleBack
+    400026: CochonLLegDigit11
+    400028: CochonLLegDigit11Back
+    400030: CochonNeck1
+    400032: CochonNeck2
+    400034: CochonNose
+    400036: CochonNoseBone001
+    400038: CochonPelvis
+    400040: Cochonpelvis02
+    400042: CochonRear
+    400044: CochonRearBone001
+    400046: CochonReye
+    400048: CochonReyelidDown
+    400050: CochonReyelidUp
+    400052: CochonRibs
+    400054: CochonRLeg1
+    400056: CochonRLeg1Back
+    400058: CochonRLeg2
+    400060: CochonRLeg2Back
+    400062: CochonRLegAnkle
+    400064: CochonRLegAnkleBack
+    400066: CochonRLegDigit11
+    400068: CochonRLegDigit11Back
+    400070: CochonSpine1
+    400072: CochonSpine2
+    400074: CochonSpine3
+    400076: CochonTail1
+    400078: CochonTail2
+    400080: CochonTail3
+    400082: Cochontongue
+    400084: CochontongueBone001
+    400086: low_pig_body
+    400088: low_pig_dents_inf
+    400090: low_pig_dents_sup
+    400092: low_pig_eyeD
+    400094: low_pig_eyeG
+    400096: low_pig_tongue
+    400098: //RootNode
+    4300000: low_pig_dents_inf
+    4300002: low_pig_body
+    4300004: low_pig_eyeG
+    4300006: low_pig_tongue
+    4300008: low_pig_dents_sup
+    4300010: low_pig_eyeD
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: low_pig_body
+    13700002: low_pig_dents_inf
+    13700004: low_pig_dents_sup
+    13700006: low_pig_eyeD
+    13700008: low_pig_eyeG
+    13700010: low_pig_tongue
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 38603
+  packageName: URP - Glass Shaders
+  packageVersion: 2022.3
+  assetPath: Assets/Ciconia Studio/Shaders/Glass Shaders/URP/Demo Scene/Sources/Models/Pig/Pig_LOD0.FBX
+  uploadId: 641315

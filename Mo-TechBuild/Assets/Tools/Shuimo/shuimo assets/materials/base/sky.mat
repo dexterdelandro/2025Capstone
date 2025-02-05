@@ -140,7 +140,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _degrees: -10
+    - _degrees: 0
     - _height: 1
     - _horizon: 0
     - _light: 1
