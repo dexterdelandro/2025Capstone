@@ -14,7 +14,19 @@ public class EarthPlatformSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G)) // 这里可以替换为手柄输入
         {
+<<<<<<< Updated upstream
             TrySpawnPlatform();
+=======
+            if (itemCollector != null && itemCollector.CanUseEarthAbility())
+            {
+                TrySpawnPlatform();
+                itemCollector.UseSpirit(); // 使用 Spirit
+            }
+            else
+            {
+                Debug.Log("Not enough Spirits collected to use Earth Ability!");
+            }
+>>>>>>> Stashed changes
         }
     }
 

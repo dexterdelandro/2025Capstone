@@ -1,8 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro; 
 
 public class ItemCollector : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public int totalItemsToCollectZone1 = 5;
     public int totalItemsToCollectZone2 = 3;
     public int currentCollectedItemsZone1 = 0;
@@ -36,6 +37,19 @@ public class ItemCollector : MonoBehaviour
     void Update()
     {
         if (canActivateZone1 && Input.GetKeyDown(KeyCode.E))
+=======
+    public int totalCollectedSpirits = 0; 
+    public int currentSpiritsAvailable = 0; 
+    public TextMeshProUGUI spiritUIText; 
+
+    private bool canCollectSpirit = false; 
+    private Spirit currentSpirit; 
+
+    void Update()
+    {
+        // 玩家按 E 收集 Spirit
+        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
+>>>>>>> Stashed changes
         {
             ActivateHiddenObjectZone1();
         }
@@ -50,6 +64,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (uiText != null)
         {
+<<<<<<< Updated upstream
             uiText.text = "Collected: " + currentCollected + " / " + totalToCollect;
         }
     }
@@ -132,6 +147,68 @@ public class ItemCollector : MonoBehaviour
             if (canActivateZone2 && Vector3.Distance(other.transform.position, activationZone2.position) <= activationZoneRadius)
             {
                 Debug.Log("Press 'E' to activate the hidden object in Zone 2.");
+=======
+            totalCollectedSpirits++; // 增加总收集数量
+            currentSpiritsAvailable++; // 增加可用的 Spirit 计数
+            UpdateSpiritUI();
+            currentSpirit.DestroySpirit();
+            currentSpirit = null;
+        }
+    }
+
+    // 检查是否还有可用的 Spirit
+    public bool CanUseEarthAbility()
+    {
+        return currentSpiritsAvailable > 0;
+    }
+
+    // 消耗一个 Spirit
+    public void UseSpirit()
+    {
+        if (currentSpiritsAvailable > 0)
+        {
+            currentSpiritsAvailable--; // 减少可用的 Spirit 数量
+            UpdateSpiritUI();
+        }
+    }
+
+    public int GetAvailableSpirits()
+    {
+        return currentSpiritsAvailable;
+    }
+
+    private void UpdateSpiritUI()
+    {
+        if (spiritUIText != null)
+        {
+            spiritUIText.text = "Spirits: " + currentSpiritsAvailable;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Elemental"))
+        {
+            canCollectSpirit = true;
+            currentSpirit = other.GetComponent<Spirit>();
+
+            if (currentSpirit != null)
+            {
+                currentSpirit.ShowPopUp(true); // 显示交互提示
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Elemental"))
+        {
+            canCollectSpirit = false;
+            if (currentSpirit != null)
+            {
+                currentSpirit.ShowPopUp(false); // 隐藏交互提示
+                currentSpirit = null;
+>>>>>>> Stashed changes
             }
         }
     }
