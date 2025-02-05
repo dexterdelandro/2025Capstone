@@ -44,7 +44,7 @@ public class CompanionFollow : MonoBehaviour
 
     public float currDistance;
 
-    public string fileName = "/Data/LogFile.txt";
+    public string fileName;
 
     [Space(10)]
     [Header("-----Ink Caps-----")]
@@ -216,9 +216,10 @@ public class CompanionFollow : MonoBehaviour
 
     public void PrintData(){
         //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
-        string filePath = Application.persistentDataPath + fileName;
+        string path = Application.dataPath + "/DataLogs/data.txt";
+        //Debug.Log("File Written to: " + path);
 
-        StreamWriter writer = new StreamWriter(filePath, false);
+        StreamWriter writer = new StreamWriter(path, false);
         if(isStoic){
             writer.Write("Stoic,");
         }else{
@@ -241,6 +242,6 @@ public class CompanionFollow : MonoBehaviour
         writer.Write("done");
         writer.Close();
 
-        Debug.Log("File written to: " + filePath);
+        Debug.Log("File written to: " + path);
     }
 }
