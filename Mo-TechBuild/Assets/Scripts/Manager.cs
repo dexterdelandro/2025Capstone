@@ -75,7 +75,7 @@ public class Manager : MonoBehaviour
         gamestate = GameState.Pause;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
-        GameUI.gameObject.SetActive(false);
+        //GameUI.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(true);
     }
 
@@ -83,7 +83,7 @@ public class Manager : MonoBehaviour
         gamestate = GameState.Playing;
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
-        GameUI.gameObject.SetActive(true);
+        //GameUI.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
     }
 }
