@@ -12,6 +12,8 @@ TagManager:
   - WallRun
   - Collectible
   - Elemental
+  - CinemachineTarget
+  - BurnDown
   layers:
   - Default
   - TransparentFX
