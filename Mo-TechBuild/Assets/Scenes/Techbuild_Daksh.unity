@@ -10914,6 +10914,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7437db6a450d674b848c5d6ab87b61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionTime: 0
+  centerdot: {fileID: 0}
+  mainCamera: {fileID: 0}
+  spriteLayer:
+    serializedVersion: 2
+    m_Bits: 0
   player: {fileID: 1798975043}
   particesystem: {fileID: 960988622}
   movementSpeed: 4
@@ -10922,6 +10928,25 @@ MonoBehaviour:
   minEndDistance: 0
   endLocationRadius: 2
   currDistance: 0
+  fileName: /Data/LogFile.txt
+  softCap1: 0
+  hardCap1: 0
+  softCap2: 0
+  hardCap2: 0
+  isStoic: 0
+  _softCap: 0
+  _hardCap: 0
+  totalInkLevel: 0
+  inkCheckCount: 0
+  currentInkLevel: 0
+  overSoftCap: 0
+  overHardCap: 0
+  overHardCapList: []
+  overSoftCapList: []
+  timeOverHardCap: 0
+  timeOverSoftCap: 0
+  avgInk: 0
+  avgInkCounter: 0
 --- !u!195 &569519412
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -44673,18 +44698,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd91b0e77a90034f9ba58e904cdcdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalItemsToCollectZone1: 5
-  totalItemsToCollectZone2: 3
-  currentCollectedItemsZone1: 0
-  currentCollectedItemsZone2: 0
-  uiTextZone1: {fileID: 2030916363}
-  uiTextZone2: {fileID: 1522401666}
-  hiddenObjectZone1: {fileID: 1351780789}
-  hiddenObjectZone2: {fileID: 1563537051}
-  activationZone1: {fileID: 1925026986}
-  activationZone2: {fileID: 614497674}
-  activationZoneRadius: 2
-  companion: {fileID: 569519400}
+  totalCollectedSpirits: 0
+  requiredSpiritsForEarthAbility: 3
+  spiritUIText: {fileID: 0}
+  spiritCollectSound: {fileID: 0}
 --- !u!114 &2078710081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44699,6 +44716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 3678047244493109906, guid: bee88b5a9d8eab2448bb41ff7d7d56b8, type: 3}
   maxSpawnDistance: 5
+  minSpawnDistance: 2
   spawnHeightOffset: -2
   riseSpeed: 2
 --- !u!1 &2089170401
