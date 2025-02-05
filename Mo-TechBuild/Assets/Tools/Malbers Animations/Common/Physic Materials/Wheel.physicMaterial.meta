@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 07b377b829474a548a0c0470e165979d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 13400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Physic Materials/Wheel.physicMaterial
+  uploadId: 709915

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 07664bb973f838341915f33795774cfb
+timeCreated: 1489422308
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Projectiles/Fire Arrow.prefab
+  uploadId: 709915

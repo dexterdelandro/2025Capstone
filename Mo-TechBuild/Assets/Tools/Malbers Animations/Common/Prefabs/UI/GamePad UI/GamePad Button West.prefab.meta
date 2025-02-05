@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 73cf4de6d27e1974d844469e1550fbb4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/UI/GamePad UI/GamePad Button
+    West.prefab
+  uploadId: 709915

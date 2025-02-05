@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7b615104e974f564faa2d8db65d150fe
+labels:
+- Weapon
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Bow Main.prefab
+  uploadId: 709915

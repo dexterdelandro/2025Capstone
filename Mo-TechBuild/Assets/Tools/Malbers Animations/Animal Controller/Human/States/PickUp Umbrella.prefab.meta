@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a61593d14f5d23c40a94ca6c6616c260
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Animal Controller/Human/States/PickUp Umbrella.prefab
+  uploadId: 709915

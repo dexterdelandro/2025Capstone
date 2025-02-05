@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e001b7dee1e40fa41bcfa643891b44bf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Zones/Zone Actions/Zone Enter
+    Hole.prefab
+  uploadId: 709915

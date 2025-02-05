@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 42f8c4c946e7c9343a95b705fd424d2c
+labels:
+- Effect
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Particles/Prefabs/Explosion Effect.prefab
+  uploadId: 709915

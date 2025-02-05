@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c3e57e2195d5d7c4facce237c94edee5
+timeCreated: 1481144648
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Scriptable Assets/IDs/Actions/Emotions/Scared.asset
+  uploadId: 709915

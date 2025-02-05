@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 643dbfe5502cdad42857cb734a9da7ab
+timeCreated: 1502833631
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/AI/OffMeshLink Fly.prefab
+  uploadId: 709915

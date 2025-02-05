@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a406d526184f5d743b40023281d273c3
+timeCreated: 1481144648
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Scriptable Assets/IDs/Actions/Emotions/Happy.asset
+  uploadId: 709915

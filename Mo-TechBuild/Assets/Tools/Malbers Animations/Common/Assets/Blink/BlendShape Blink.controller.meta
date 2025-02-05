@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0afbcd6a030e8f64ea609948650b0f89
+timeCreated: 1475815865
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Assets/Blink/BlendShape Blink.controller
+  uploadId: 709915

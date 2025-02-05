@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4d090c668d189f645b55c53d8bfdd1c4
+timeCreated: 1481127070
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Materials & Textures/Environment/Climbable.mat
+  uploadId: 709915

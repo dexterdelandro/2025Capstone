@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3290af58b4932f84998a1eea0ae1ecc4
+labels:
+- Weapon
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Spear.prefab
+  uploadId: 709915

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1817629ae77a194468cfcc89df703f29
+labels:
+- Effect
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Particles/Prefabs/Flash Effect.prefab
+  uploadId: 709915

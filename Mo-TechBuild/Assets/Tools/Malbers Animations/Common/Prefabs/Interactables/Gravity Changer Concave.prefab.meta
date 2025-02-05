@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b36ed34d973750245b1496cc1d7f6e2e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Interactables/Gravity Changer
+    Concave.prefab
+  uploadId: 709915

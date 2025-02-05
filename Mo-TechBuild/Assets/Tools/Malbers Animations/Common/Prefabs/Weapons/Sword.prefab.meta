@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cd655bcb33b07a94c9e01c2e9b6b5573
+labels:
+- Weapon
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Prefabs/Weapons/Sword.prefab
+  uploadId: 709915

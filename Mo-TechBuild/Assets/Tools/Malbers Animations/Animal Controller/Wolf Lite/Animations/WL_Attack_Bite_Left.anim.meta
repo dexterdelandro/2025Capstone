@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6443dfe53c9ff624c829eae63abd98a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Animal Controller/Wolf Lite/Animations/WL_Attack_Bite_Left.anim
+  uploadId: 709915

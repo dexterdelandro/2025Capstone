@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 234c4ed5294e3e94badc551e37e2c79b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148877
+  packageName: Animal Controller (Malbers Character Controller)
+  packageVersion: 1.4.7
+  assetPath: Assets/Malbers Animations/Common/Meshes/PlayGround/Tube.mesh
+  uploadId: 709915
