@@ -1,75 +1,37 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Sprite : MonoBehaviour
+public class Spirit : MonoBehaviour
 {
-    Canvas popUpCanvas;
-    public ItemCollector player;
-    public bool inContact = false;
-
-    
-    public bool isZone1Item = true;
+    private Canvas popUpCanvas;
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player")?.GetComponent<ItemCollector>();
-        if (player == null)
-        {
-            Debug.LogError("Player or ItemCollector script not found. Make sure the player object has the correct tag and script.");
-        }
-
         popUpCanvas = GetComponentInChildren<Canvas>();
         if (popUpCanvas == null)
         {
             Debug.LogError("Canvas component not found. Ensure the object has a child with a Canvas component.");
         }
+        ShowPopUp(false); // 默认隐藏交互提示
     }
 
-    void Update()
+    public void ShowPopUp(bool state)
     {
-        if (!inContact) return;
-
         if (popUpCanvas != null)
-            popUpCanvas.transform.LookAt(Camera.main.transform);
-
-        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (isZone1Item)
-            {
-                player.CollectItemForZone1(); 
-            }
-            else
-            {
-                player.CollectItemForZone2(); 
-            }
-            StartCoroutine(Collected());
+            popUpCanvas.enabled = state;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void DestroySpirit()
     {
-        if (other.CompareTag("Player"))
-        {
-            inContact = true;
-            if (popUpCanvas != null) popUpCanvas.enabled = true;
-        }
+        ShowPopUp(false);
+        StartCoroutine(DestroyAfterDelay());
     }
 
-    private IEnumerator Collected()
+    private IEnumerator DestroyAfterDelay()
     {
-        if (popUpCanvas != null) popUpCanvas.enabled = false;
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            inContact = false;
-            if (popUpCanvas != null) popUpCanvas.enabled = false;
-        }
     }
 }

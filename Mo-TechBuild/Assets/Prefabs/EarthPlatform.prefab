@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 805605386799928537}
   - component: {fileID: 9032762301949514666}
   m_Layer: 0
-  m_Name: EartyPlatform
+  m_Name: EarthPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
