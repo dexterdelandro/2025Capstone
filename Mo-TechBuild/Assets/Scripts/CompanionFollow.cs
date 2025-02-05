@@ -69,7 +69,7 @@ public class CompanionFollow : MonoBehaviour
     [Space(10)]
     [Header("-----Research Data-----")]
     [SerializeField]
-    private float totalInkLevel;
+    private float maxInkLevel = 12;
     
     [SerializeField]
     private float inkCheckCount;
@@ -116,15 +116,18 @@ public class CompanionFollow : MonoBehaviour
     }
 
     public void UpdateNumCollectedSprites(int num){
-        if(num==5){
+        currentInkLevel = num;
+    
+        if(currentInkLevel>_hardCap){
             if(!particesystem.isPlaying)particesystem.Play();
         }else{
             if(particesystem.isPlaying)particesystem.Stop();
         }
-        if(num>0){
+        
+        if(currentInkLevel>_softCap){
             movementSpeed = (1.0f-(num*0.1f))*StartingMoveSpeed;
         }else{
-            movementSpeed = StartingMoveSpeed;
+            movementSpeed = 5;
         }
     }
 
@@ -188,7 +191,7 @@ public class CompanionFollow : MonoBehaviour
         time += Time.deltaTime;
         if(time>=1.0f){ //log ink level every second
             time = 0;
-            avgInk += currentInkLevel/100.0f;
+            avgInk += currentInkLevel/maxInkLevel;
         }
 
         if(currentInkLevel>_hardCap){
