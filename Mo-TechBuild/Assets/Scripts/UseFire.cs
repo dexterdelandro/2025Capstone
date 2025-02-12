@@ -15,6 +15,7 @@ public class UseFire : MonoBehaviour
     {
         firePS = GetComponentInChildren<ParticleSystem>();
         flameHitBox = GetComponentInChildren<BoxCollider>();
+        flameHitBox.enabled = false;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class UseFire : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-        if(isEmitting && other.CompareTag("Burnable")){
+        if(other.gameObject.CompareTag("Burnable")){
             Debug.Log("HItting");
             Destroy(other.gameObject, 0.5f);
         }

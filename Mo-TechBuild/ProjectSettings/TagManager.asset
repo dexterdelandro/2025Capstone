@@ -13,7 +13,6 @@ TagManager:
   - Collectible
   - Elemental
   - CinemachineTarget
-  - BurnDown
   - Burnable
   layers:
   - Default

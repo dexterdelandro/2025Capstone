@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem.LowLevel;
 using System.IO;
+using System;
+using TMPro;
 
 
 public class CompanionFollow : MonoBehaviour
@@ -15,6 +17,8 @@ public class CompanionFollow : MonoBehaviour
 
     public RectTransform centerdot;
     public Camera mainCamera;
+
+    private Queue<string> previousComplaints = new Queue<string>();
 
     public LayerMask spriteLayer;
     enum CurrentAction{
@@ -29,6 +33,15 @@ public class CompanionFollow : MonoBehaviour
 
     public ParticleSystem particesystem;
 
+    public List<String>complaints;
+
+    public float complaintDisplayTime;
+
+    [SerializeField]
+    private Canvas dialogueUI;
+
+    [SerializeField]
+    private TextMeshPro complaintText;
     private float time;
 
     [Header("-----Movement Variables-----")]
@@ -147,7 +160,7 @@ public class CompanionFollow : MonoBehaviour
         //follow the player
         if(currDistance>minStartDistance){
             currentAction = CurrentAction.Following;
-            Vector3 targetLocation = player.transform.position + Random.insideUnitSphere*endLocationRadius;
+            Vector3 targetLocation = player.transform.position + UnityEngine.Random.insideUnitSphere*endLocationRadius;
             agent.SetDestination(targetLocation);
 
         }else{
@@ -187,11 +200,35 @@ public class CompanionFollow : MonoBehaviour
         currentAction = CurrentAction.Idle;
     }
 
+    private IEnumerator DisplayComplaint(){
+        GenerateNewComplaint();
+        dialogueUI.gameObject.SetActive(true);
+        yield return new WaitForSeconds(complaintDisplayTime);
+        dialogueUI.gameObject.SetActive(false);
+    }
+
+    public void GenerateNewComplaint(){
+        List<string> availableChoices = new List<string>(complaints);
+        
+        foreach (string str in previousComplaints){
+            availableChoices.Remove(str);
+        }
+        string chosen = availableChoices[UnityEngine.Random.Range(0,availableChoices.Count)];
+
+        complaintText.text = chosen;
+
+        if(previousComplaints.Count >=2){
+            previousComplaints.Dequeue();
+        }
+        previousComplaints.Enqueue(chosen);
+    }
+
     private void LogData(){
         time += Time.deltaTime;
         if(time>=1.0f){ //log ink level every second
             time = 0;
             avgInk += currentInkLevel/maxInkLevel;
+            avgInkCounter++;
         }
 
         if(currentInkLevel>_hardCap){
