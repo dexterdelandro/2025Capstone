@@ -234,6 +234,7 @@ public class CompanionFollow : MonoBehaviour
         if(time>=1.0f){ //log ink level every second
             time = 0;
             avgInk += currentInkLevel;
+            avgInkCounter++;
         }
 
         if(currentInkLevel>=_hardCap){
