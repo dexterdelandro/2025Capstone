@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem.LowLevel;
 using System.IO;
+using System;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class CompanionFollow : MonoBehaviour
@@ -29,6 +32,14 @@ public class CompanionFollow : MonoBehaviour
 
     public ParticleSystem particesystem;
 
+    public List<String>complaints;
+
+    public float complaintDisplayTime;
+
+    [SerializeField]
+    private Canvas dialogueUI;
+
+    public TMP_Text complaintText;
     private float time;
 
     [Header("-----Movement Variables-----")]
@@ -65,6 +76,13 @@ public class CompanionFollow : MonoBehaviour
     public float _softCap;
 
     public float _hardCap;
+
+
+    [SerializeField]
+    private float nextSoftCapComplaintTime = 0;
+
+    [SerializeField]
+    private float nextHardCapComplaintTime = 0;
 
     [Space(10)]
     [Header("-----Research Data-----")]
@@ -191,20 +209,32 @@ public class CompanionFollow : MonoBehaviour
             avgInk += currentInkLevel/100.0f;
         }
 
-        if(currentInkLevel>_hardCap){
+        if(currentInkLevel>=_hardCap){
             overSoftCap = false;
             if(!overHardCap){ //if just crossed cap
                  overHardCap = true;
                  overHardCapList.Add(Manager.Instance.GetTimeStamp());
             }
             timeOverHardCap+= Time.deltaTime;
-        }else if (currentInkLevel>_softCap){
+            if(timeOverHardCap>=nextHardCapComplaintTime){
+                if(isStoic){
+                    nextHardCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
+                }else{
+                    nextHardCapComplaintTime += UnityEngine.Random.Range(10.0f, 30.0f);
+                }
+                StartCoroutine(DisplayComplaint());
+            }
+        }else if (currentInkLevel>=_softCap){
             overHardCap = false;
             if(!overSoftCap){ //if just crossed cap
                 overSoftCap = true;
                  overSoftCapList.Add(Manager.Instance.GetTimeStamp());
             }
             timeOverSoftCap += Time.deltaTime;
+            if(!isStoic && timeOverSoftCap>nextSoftCapComplaintTime){
+                nextSoftCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
+                StartCoroutine(DisplayComplaint());
+            }
         }else{
             overSoftCap = false;
             overHardCap = false;
@@ -212,25 +242,45 @@ public class CompanionFollow : MonoBehaviour
     }
 
     public void PrintData(){
+
+        string clipboardcopy="";
+        if(isStoic){
+            clipboardcopy += "Stoic,";
+        }else{
+            clipboardcopy += "Sensitive,";
+        }
+        clipboardcopy+=avgInk/avgInkCounter + "," + timeOverSoftCap + "," + overSoftCapList.Count + ",";
+        foreach(float timestamp in overSoftCapList){
+            clipboardcopy+=timestamp+",";
+        }
+        clipboardcopy +="," + timeOverHardCap + "," + overHardCapList.Count+",";
+        foreach(float timestamp in overHardCapList){
+            clipboardcopy+=timestamp + ",";
+        }
+        clipboardcopy +="done";
+        GUIUtility.systemCopyBuffer = clipboardcopy;
+
         //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
-        string filePath = Application.persistentDataPath + fileName;
+        string path = Application.dataPath + "/data.txt";
+        //Debug.Log("File Written to: " + path);
 
         StreamWriter writer = new StreamWriter(filePath, false);
         if(isStoic){
             writer.Write("Stoic,");
         }else{
-            writer.Write("Not Stoic,");
+            writer.Write("Sensitive,");
         }
         writer.Write(avgInk/avgInkCounter+",");
-        writer.Write(overSoftCapList.Count+",");
-        writer.WriteLine(overHardCapList.Count+",");
 
+        writer.Write(timeOverSoftCap+",");
+        writer.Write(overSoftCapList.Count+",");
         foreach(float timestamp in overSoftCapList){
             writer.Write(timestamp+",");
         }
 
         writer.Write(",");
-
+        writer.Write(timeOverHardCap+",");
+        writer.Write(overHardCapList.Count+",");
         foreach(float timestamp in overHardCapList){
             writer.Write(timestamp+",");
         }

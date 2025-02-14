@@ -37,7 +37,8 @@ public class Manager : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        EnablePause();
+        Cursor.lockState = CursorLockMode.None;
+        //EnablePause();
     }
 
     public float GetTimeStamp(){
@@ -80,6 +81,7 @@ public class Manager : MonoBehaviour
     }
 
     public void ResumePlay(){
+        pauseCanvas.gameObject.SetActive(false);
         gamestate = GameState.Playing;
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
