@@ -2307,14 +2307,14 @@ RectTransform:
   m_GameObject: {fileID: 82470162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 161890907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 57.4, y: 156.8}
+  m_AnchoredPosition: {x: 258.1, y: 66.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82470164
@@ -7958,7 +7958,7 @@ GameObject:
   - component: {fileID: 244625576}
   m_Layer: 0
   m_Name: Plant
-  m_TagString: Untagged
+  m_TagString: Burnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19852,9 +19852,15 @@ MonoBehaviour:
   complaints:
   - I'm getting tired...
   - My head getting is heavy...
-  complaintDisplayTime: 0
-  dialogueUI: {fileID: 0}
-  complaintText: {fileID: 0}
+  - Phew...
+  - Can we take a break soon?
+  - Are we there yet?
+  - You just keep on going....
+  - I am NOT a fan of cardio
+  - My feet are on fire
+  complaintDisplayTime: 2.5
+  dialogueUI: {fileID: 161890910}
+  complaintText: {fileID: 1718834995}
   movementSpeed: 4
   StartingMoveSpeed: 4
   minStartDistance: 3
@@ -19869,6 +19875,8 @@ MonoBehaviour:
   isStoic: 0
   _softCap: 0
   _hardCap: 0
+  nextSoftCapComplaintTime: 0
+  nextHardCapComplaintTime: 0
   maxInkLevel: 12
   inkCheckCount: 0
   currentInkLevel: 0
@@ -50676,7 +50684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Print Data
+  m_text: Print & Copy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50968,7 +50976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1556878378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56461,10 +56469,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 161890907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 81.05}
-  m_SizeDelta: {x: 0, y: 162.1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50.17}
+  m_SizeDelta: {x: 363.8, y: 95.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706141495
 MonoBehaviour:
@@ -56756,7 +56764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Im getting tired...
+  m_text: I'm getting tired...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -56799,7 +56807,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
