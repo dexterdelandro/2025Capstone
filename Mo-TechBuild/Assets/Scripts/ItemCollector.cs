@@ -15,6 +15,7 @@ public class ItemCollector : MonoBehaviour
     [Header("Audio Settings")]
     public AudioClip spiritCollectSound; // �ռ�Spirit����Ч
     private AudioSource audioSource; // ���ڲ�����Ч
+    private FMOD.Studio.EventInstance absorb;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class ItemCollector : MonoBehaviour
             {
                 audioSource.PlayOneShot(spiritCollectSound);
             }
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
             currentSpirit.DestroySpirit(); // ���� Spirit
             currentSpirit = null;
         }
