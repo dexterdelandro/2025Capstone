@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Terrace Fields 13
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 0}
+  m_Mask: {fileID: 2800000, guid: 84289bdcc4d739241a8115488340b73a, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:
