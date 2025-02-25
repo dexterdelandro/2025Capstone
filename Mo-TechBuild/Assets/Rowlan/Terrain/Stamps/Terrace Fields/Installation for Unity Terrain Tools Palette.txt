@@ -1,0 +1,5 @@
+Please unzip the archive in the brushes folder in order to use the stamps in Unity's Terrain Tools Palette.
+
+Keep in mind that the Terrain Tools Palette loads all of the heightmaps of all brushes of your project into memory. This memory consumption will become noticable once you click the Terrain gameobject.
+
+This is only a limitation of Unity's Terrain Tools, not with other assets like MicroVerse.
