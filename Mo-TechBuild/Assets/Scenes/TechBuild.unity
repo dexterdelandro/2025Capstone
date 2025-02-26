@@ -23312,15 +23312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9052955206502225224, guid: 97486511e1721c943a037ac82d8c2cbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 219.71811
+      value: 203.208
       objectReference: {fileID: 0}
     - target: {fileID: 9052955206502225224, guid: 97486511e1721c943a037ac82d8c2cbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.7970557
+      value: 3.273
       objectReference: {fileID: 0}
     - target: {fileID: 9052955206502225224, guid: 97486511e1721c943a037ac82d8c2cbe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 281.14435
+      value: 199.24
       objectReference: {fileID: 0}
     - target: {fileID: 9052955206502225224, guid: 97486511e1721c943a037ac82d8c2cbe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27326,8 +27326,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 974238578668270715, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
+      propertyPath: Grounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 974238578668270715, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 974238578668270715, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
+      propertyPath: JumpTimeout
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 974238578668270715, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: GroundLayers.m_Bits
@@ -30664,7 +30672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &940919059
 Transform:
   m_ObjectHideFlags: 0
@@ -34499,7 +34507,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 8
+  m_Radius: 3.5
   m_Center: {x: 0, y: 2.6273265, z: -0.21583891}
 --- !u!114 &1034974556
 MonoBehaviour:
@@ -34513,9 +34521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1385fd89175aa42a1aaa42b9c3bfa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftSpeed: 3
+  liftSpeed: 4
   horizontalForce: 0
-  stormTopHeight: 6
+  stormTopHeight: 4.5
   stopThreshold: 1
   exitSlowFallSpeed: 2
 --- !u!4 &1034974557 stripped
@@ -37535,45 +37543,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wildfire
       objectReference: {fileID: 0}
+    - target: {fileID: 2746157775663992520, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5578bdf27ee7bf743bd72e8e4172913c, type: 2}
+    - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 221.1675
+      value: 191.15
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2648134
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 275.19
+      value: 213.28
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9525725
+      value: 0.8553193
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.021651508
+      value: -0.0062883943
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.29540175
+      value: -0.5172533
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06981891
+      value: 0.02895542
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 34.458
+      value: -62.296
       objectReference: {fileID: 0}
     - target: {fileID: 3535939890758702540, guid: d7d4744e6c09ded459c092589d2cb960, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -8.384
+      value: 3.213
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55540,6 +55556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stormPrefab: {fileID: 1034974552}
+  itemCollector: {fileID: 1663615305}
   stormDuration: 10
   stormKey: 114
   spawnOffset: {x: 0, y: 0, z: 1}
@@ -69521,7 +69538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5529655603814434651, guid: a349d02b828843141a2e7580a79df72f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6267965346079605460, guid: a349d02b828843141a2e7580a79df72f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69529,7 +69546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6267965346079605460, guid: a349d02b828843141a2e7580a79df72f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 35.8
       objectReference: {fileID: 0}
     - target: {fileID: 6267965346079605460, guid: a349d02b828843141a2e7580a79df72f, type: 3}
       propertyPath: m_LocalPosition.z

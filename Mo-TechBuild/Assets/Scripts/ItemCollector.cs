@@ -1,10 +1,10 @@
 using UnityEngine;
-using TMPro; // ���� TextMeshPro �����ռ�
+using TMPro; 
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalCollectedSpirits = 0; // ����ռ����� Spirit ����
-    public int currentSpiritsAvailable = 5; // ��ҿ��õ� Spirit ����
+    public int totalCollectedSpirits = 0; 
+    public int currentSpiritsAvailable = 5; 
     public TextMeshProUGUI spiritUIText; 
 
     private bool canCollectSpirit = false; 
@@ -13,8 +13,8 @@ public class ItemCollector : MonoBehaviour
     public CompanionFollow companion;
 
     [Header("Audio Settings")]
-    public AudioClip spiritCollectSound; // �ռ�Spirit����Ч
-    private AudioSource audioSource; // ���ڲ�����Ч
+    public AudioClip spiritCollectSound; 
+    private AudioSource audioSource; 
     private FMOD.Studio.EventInstance absorb;
 
     void Start()
@@ -22,13 +22,13 @@ public class ItemCollector : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>(); // ���û�� AudioSource���Զ�����
+            audioSource = gameObject.AddComponent<AudioSource>(); 
         }
     }
 
     void Update()
     {
-        // ��Ұ� E �ռ� Spirit
+        
         if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
         {
             CollectSpirit();
@@ -45,15 +45,10 @@ public class ItemCollector : MonoBehaviour
 
             UpdateSpiritUI();
 
-            // ���� Spirit �ռ���Ч
-            /*
-            if (spiritCollectSound != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(spiritCollectSound);
-            }
-            */
+            
+           
             FMODUnity.RuntimeManager.PlayOneShot("event:/Interactions/Absorb");
-            currentSpirit.DestroySpirit(); // ���� Spirit
+            currentSpirit.DestroySpirit(); 
             currentSpirit = null;
         }
     }
@@ -96,7 +91,7 @@ public class ItemCollector : MonoBehaviour
 
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(true); // ��ʾ������ʾ
+                currentSpirit.ShowPopUp(true); 
             }
         }
     }
@@ -108,7 +103,7 @@ public class ItemCollector : MonoBehaviour
             canCollectSpirit = false;
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(false); // ���ؽ�����ʾ
+                currentSpirit.ShowPopUp(false); 
                 currentSpirit = null;
             }
         }

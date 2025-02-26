@@ -13,7 +13,7 @@ public class EarthPlatformSpawner : MonoBehaviour
 
     void Start()
     {
-        itemCollector = FindObjectOfType<ItemCollector>();
+        itemCollector = FindAnyObjectByType<ItemCollector>();
         if (itemCollector == null)
         {
             Debug.LogError("EarthPlatformSpawner: ItemCollector script not found in the scene.");
@@ -27,7 +27,7 @@ public class EarthPlatformSpawner : MonoBehaviour
             if (itemCollector != null && itemCollector.CanUseEarthAbility())
             {
                 TrySpawnPlatform();
-                itemCollector.UseSpirit(); // Ê¹ÓÃ Spirit
+                itemCollector.UseSpirit(); // Ê¹ï¿½ï¿½ Spirit
             }
             else
             {
