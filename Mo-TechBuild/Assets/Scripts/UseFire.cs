@@ -40,7 +40,7 @@ public class UseFire : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("Burnable")){
-            Debug.Log("HItting");
+            //Debug.Log("HItting");
             Destroy(other.gameObject, 0.5f);
         }
     }
