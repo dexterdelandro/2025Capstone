@@ -46,11 +46,13 @@ public class ItemCollector : MonoBehaviour
             UpdateSpiritUI();
 
             // ���� Spirit �ռ���Ч
+            /*
             if (spiritCollectSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(spiritCollectSound);
             }
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
+            */
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Interactions/Absorb");
             currentSpirit.DestroySpirit(); // ���� Spirit
             currentSpirit = null;
         }
