@@ -368,9 +368,11 @@ namespace StarterAssets
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
         }
-
+        
         private void OnFootstep(AnimationEvent animationEvent)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/OLD_Footstep");
+            /*
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 if (FootstepAudioClips.Length > 0)
@@ -379,14 +381,19 @@ namespace StarterAssets
                     AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
                 }
             }
+            */
         }
 
         private void OnLand(AnimationEvent animationEvent)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/JumpLand");
+            /*
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+            */
         }
+        
     }
 }

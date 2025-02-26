@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1083653748208569102}
   - component: {fileID: 805605386799928537}
   - component: {fileID: 9032762301949514666}
+  - component: {fileID: 1525515803464101770}
   m_Layer: 0
   m_Name: EarthPlatform
   m_TagString: Untagged
@@ -108,3 +109,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1525515803464101770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678047244493109906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -485271989
+      Data2: 1121323307
+      Data3: 1932616097
+      Data4: 751818467
+    Path: event:/Interactions/EarthPower
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
