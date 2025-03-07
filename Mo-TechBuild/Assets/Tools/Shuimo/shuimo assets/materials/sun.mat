@@ -155,7 +155,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - __1: -0.02
+    - __1: 0
     - __11: 45.47
     - __12: 0.05
     - __13: 1
@@ -173,7 +173,7 @@ Material:
     - __26: 50
     - __27: 1
     - __29: 8
-    - __3: 1.5
+    - __3: 130
     - __30: 0
     - __31: 0.5
     - __32: 30
@@ -183,7 +183,7 @@ Material:
     - __Y: 1
     - _brush_noise_scale: 5
     - _degrees: 0
-    - _distance_effect: 0.021
+    - _distance_effect: 0
     - _fade_out: 1
     - _fade_out_gradient: 0.2
     - _line_noise_scale: 5
