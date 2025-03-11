@@ -176,7 +176,7 @@ Material:
     m_Colors:
     - WaveSpeed: {r: 9.77, g: 7.69, b: -24.04, a: 5.51}
     - _BumpMap_ST: {r: 1, g: 1, b: 0, a: 0}
-    - _Color: {r: 0.4018605, g: 0.7104401, b: 0.79514813, a: 0.272}
+    - _Color: {r: 0.7911051, g: 0.9544981, b: 1, a: 0.272}
     - _EdgeColor: {r: 0.25658593, g: 0.45812863, b: 0.5849056, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_ST: {r: 1, g: 1, b: 0, a: 0}

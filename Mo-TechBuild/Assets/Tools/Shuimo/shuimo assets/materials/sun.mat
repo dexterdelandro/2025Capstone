@@ -126,7 +126,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _: 1.27
+    - _: 0.8
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -177,11 +177,11 @@ Material:
     - __30: 0
     - __31: 0.5
     - __32: 30
-    - __4: 0
+    - __4: -0.37
     - __8: 11.84
-    - __9: 1.52
+    - __9: 1.71
     - __Y: 1
-    - _brush_noise_scale: 5
+    - _brush_noise_scale: 1
     - _degrees: 0
     - _distance_effect: 0
     - _fade_out: 1
