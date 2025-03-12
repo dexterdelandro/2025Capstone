@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e2da976f64e0337419869bb35ab981a4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 188357
+  packageName: Procedural Terrain Painter
+  packageVersion: 1.0.5
+  assetPath: Assets/ProceduralTerrainPainter/_Demo/DemoSceneSettings.lighting
+  uploadId: 712355
