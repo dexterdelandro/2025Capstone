@@ -10,7 +10,7 @@ public class SphereCollection : MonoBehaviour
         // Find the Liquid object automatically if not set
         if (liquid == null)
         {
-            liquid = FindObjectOfType<Liquid>();
+            liquid = FindAnyObjectByType<Liquid>();
         }
     }
 
