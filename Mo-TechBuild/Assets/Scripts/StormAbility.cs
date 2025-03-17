@@ -4,12 +4,12 @@ public class StormAbility : MonoBehaviour
 {
     public GameObject stormPrefab; 
     public float stormDuration = 5f; 
-    public KeyCode stormKey = KeyCode.Q; 
+    
     public Vector3 spawnOffset = new Vector3(0, 0, 0); 
 
     void Update()
     {
-        if (Input.GetKeyDown(stormKey))
+        if (Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             Vector3 spawnPos = transform.position + spawnOffset;
             GameObject storm = Instantiate(stormPrefab, spawnPos, Quaternion.identity);

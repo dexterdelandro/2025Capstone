@@ -20,12 +20,16 @@ public class UseFire : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+{
+    // 获取 R2 扳机键的输入（0 到 1 之间的浮点数）
+    float r2Trigger = Input.GetAxis("Trigger"); // 或者 "Joystick Axis 9"
+
+    if (!isEmitting && itemCollector.GetAvailableSpirits() > 0 &&
+        (Input.GetKeyDown(KeyCode.F) || r2Trigger > 0.5f))
     {
-        if(!isEmitting && itemCollector.GetAvailableSpirits()>0 && Input.GetKeyDown(KeyCode.F)){
-            //Debug.Log("yes yes");
-            StartCoroutine(EmmitFlames());
-        }
+        StartCoroutine(EmmitFlames());
     }
+}
 
     private IEnumerator EmmitFlames(){
         isEmitting = true;
