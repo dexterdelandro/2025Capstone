@@ -20,12 +20,15 @@ public class UseFire : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+{
+    float dpadY = Input.GetAxis("Vertical"); // 读取手柄十字键的 Y 轴
+
+    if (!isEmitting && itemCollector.GetAvailableSpirits() > 0 &&
+        (Input.GetKeyDown(KeyCode.F) || dpadY > 0.5f)) 
     {
-        if(!isEmitting && itemCollector.GetAvailableSpirits()>0 && Input.GetKeyDown(KeyCode.F)){
-            //Debug.Log("yes yes");
-            StartCoroutine(EmmitFlames());
-        }
+        StartCoroutine(EmmitFlames());
     }
+}
 
     private IEnumerator EmmitFlames(){
         isEmitting = true;
