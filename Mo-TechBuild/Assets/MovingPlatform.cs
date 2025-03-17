@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -5,6 +6,10 @@ public class MovingPlatform : MonoBehaviour
     public Vector3 moveDirection = Vector3.right; // 移动方向，默认为水平方向
     public float moveDistance = 5f; // 移动范围
     public float moveSpeed = 2f; // 移动速度
+
+    public float waitTime = 0;
+    public float timer = 0;
+    public Boolean isStarted = false;
 
     private Vector3 _startPosition;
     private bool _movingForward = true;
@@ -16,7 +21,15 @@ public class MovingPlatform : MonoBehaviour
 
     void Update()
     {
+        if(!isStarted){
+            timer += Time.deltaTime;
+            if(timer >= waitTime){
+                isStarted = true;
+            }
+            return;
+        }
         MovePlatform();
+
     }
 
     void MovePlatform()
