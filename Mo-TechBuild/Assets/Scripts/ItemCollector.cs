@@ -90,7 +90,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (spiritUIText != null)
         {
-            spiritUIText.text = "Spirits: " + currentSpiritsAvailable;
+            spiritUIText.text = " " + currentSpiritsAvailable;
         }
     }
 
