@@ -32,7 +32,7 @@ public class ItemCollector : MonoBehaviour
 
     void Update()
     {
-        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
+        if (canCollectSpirit && (Input.GetKeyDown(KeyCode.E)||Input.GetButtonDown("Fire1")))
         {
             CollectSpirit();
         }
