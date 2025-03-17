@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 180d90cef722145c5a86609fa8df0cd3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Notify_Notice_Orange.prefab
+  uploadId: 627704

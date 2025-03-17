@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: acc6a1a01ef7b419794e0babe9cbb85f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/InputField_Group_White.prefab
+  uploadId: 627704

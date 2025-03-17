@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 75d314d9d38f14921b061894a906f702
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/ItemIcons_Circle.prefab
+  uploadId: 627704

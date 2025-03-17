@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c29e9f7437a834d56813a85a34d8fe7d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/ActionText.prefab
+  uploadId: 627704

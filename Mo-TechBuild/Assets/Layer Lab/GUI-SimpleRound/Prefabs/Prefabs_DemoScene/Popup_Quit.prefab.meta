@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aedf6f8d96f004a03b6698429fda17c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Popup_Quit.prefab
+  uploadId: 627704

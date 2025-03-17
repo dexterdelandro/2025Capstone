@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ff651f18a0d640b08c53e8df029b3bd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Label_Oval_White.prefab
+  uploadId: 627704

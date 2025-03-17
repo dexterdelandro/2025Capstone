@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f8de2b0a408d64373bf2ff57b4aa6ad0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Toggle_Radio1.prefab
+  uploadId: 627704

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c6c919ad168a34e8a9d62d808fc1f8f0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Label_Tag_Demo.prefab
+  uploadId: 627704

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 86acee44a85cd47949937bf360a7f614
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Sliders/Slider01_White.prefab
+  uploadId: 627704

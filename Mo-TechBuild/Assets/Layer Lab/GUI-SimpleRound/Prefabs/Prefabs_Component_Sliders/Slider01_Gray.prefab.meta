@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bf0173fe1c171440aa2314cf474bff6b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Sliders/Slider01_Gray.prefab
+  uploadId: 627704

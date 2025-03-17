@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 922e01d8f17294dda997df670ef3b0d4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Label_SpeechBubble00.prefab
+  uploadId: 627704

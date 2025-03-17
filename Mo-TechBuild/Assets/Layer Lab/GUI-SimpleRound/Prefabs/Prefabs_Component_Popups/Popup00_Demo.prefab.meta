@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e009d26b0a19d43c894e692f9e386354
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Popups/Popup00_Demo.prefab
+  uploadId: 627704

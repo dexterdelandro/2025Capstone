@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4225b36328944981946b69ba96f8790
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Sliders/Slider_IconType_Green.prefab
+  uploadId: 627704

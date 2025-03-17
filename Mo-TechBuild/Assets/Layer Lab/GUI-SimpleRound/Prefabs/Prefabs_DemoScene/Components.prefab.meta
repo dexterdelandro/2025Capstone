@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c11ead41e28ce4c52a99f91b709ba5b6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Components.prefab
+  uploadId: 627704
