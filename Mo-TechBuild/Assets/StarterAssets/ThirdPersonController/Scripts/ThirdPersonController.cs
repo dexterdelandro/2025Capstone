@@ -282,7 +282,7 @@ namespace StarterAssets
         private void JumpAndGravity()
         {
             // **防止风暴影响被 `Gravity` 覆盖**
-            StormController storm = FindObjectOfType<StormController>();
+            StormController storm = FindAnyObjectByType<StormController>();
             bool playerInStorm = storm != null && storm.IsPlayerInStorm();
 
             if (!playerInStorm) // 只有当玩家不在风暴中时才使用重力

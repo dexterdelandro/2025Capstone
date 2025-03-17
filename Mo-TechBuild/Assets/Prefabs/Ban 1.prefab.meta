@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Mo-TechBuild/Assets/Animation.meta
+guid: 9da3ba3210f5a60488b8658b2970a700
+folderAsset: yes
+DefaultImporter:
+========
 guid: c243b8bedac727b4e9c13217f7ee0af2
 PrefabImporter:
+>>>>>>>> main:Mo-TechBuild/Assets/Prefabs/Ban 1.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
