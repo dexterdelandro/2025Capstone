@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class ItemCollector : MonoBehaviour
 {
@@ -21,13 +22,15 @@ public class ItemCollector : MonoBehaviour
     public Animator characterAnimator; // 角色的 Animator
     public string collectAnimationTrigger = "Collect"; // 触发动画的参数
 
+    [SerializeField] private EventReference absorbSound;
+
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
+        //audioSource = GetComponent<AudioSource>();
+        //if (audioSource == null)
+        //{
+        //    audioSource = gameObject.AddComponent<AudioSource>();
+        //}
     }
 
     void Update()
@@ -49,11 +52,13 @@ public class ItemCollector : MonoBehaviour
             UpdateSpiritUI();
 
             // 播放收集声音
-            if (spiritCollectSound != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(spiritCollectSound);
-            }
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
+            //if (spiritCollectSound != null && audioSource != null)
+            //{
+            //    audioSource.PlayOneShot(spiritCollectSound);
+            //}
+
+            AudioManager.instance.PlayOneShot(absorbSound, this.transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
 
             // 触发收集动画
             if (characterAnimator != null)

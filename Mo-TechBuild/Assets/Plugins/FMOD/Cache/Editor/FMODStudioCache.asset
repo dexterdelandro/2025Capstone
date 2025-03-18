@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Surface
   StudioPath: parameter:/Surface
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
   ID:
     data1: 3827329196
@@ -24,7 +24,8 @@ MonoBehaviour:
   IsGlobal: 1
   Labels:
   - Grass
-  - Ground
+  - Stone
+  - Tile
   Exists: 1
 --- !u!114 &-7966357071214324340
 MonoBehaviour:
@@ -80,6 +81,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44412
+--- !u!114 &-7832172223804989982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CaveDistance
+  m_EditorClassIdentifier: 
+  Name: CaveDistance
+  StudioPath: parameter:/CaveDistance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 290396128
+    data2: 748057984
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-7687578679003822002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +132,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 341
+--- !u!114 &-7234582499714248864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Amb_LeavesRustle
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Amb_LeavesRustle
+  Guid:
+    Data1: 62607366
+    Data2: 1283534621
+    Data3: -557751160
+    Data4: -777060269
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16671
+--- !u!114 &-7189691184964284299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Amb_SmallWater
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Amb_SmallWater
+  Guid:
+    Data1: -2118650522
+    Data2: 1249938833
+    Data3: 1165609621
+    Data4: -1429675966
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15169
 --- !u!114 &-6540729300742256243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +213,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1024
+--- !u!114 &-6520822550988832563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footstep/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3827329196
+    data2: 3510640766
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Grass
+  - Stone
+  - Tile
+  Exists: 1
 --- !u!114 &-6130818129722946388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +321,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-3812381446795510424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character SFX/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Character SFX/Footstep
+  Guid:
+    Data1: 57337944
+    Data2: 1310118049
+    Data3: -150717797
+    Data4: -1321801547
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6520822550988832563}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3424371864264898230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AnotherOLD_JumpLand/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3827329196
+    data2: 3510640766
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Grass
+  - Stone
+  - Tile
+  Exists: 1
 --- !u!114 &-2751552845366845342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +403,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 19300
+--- !u!114 &-1360634615404543656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/MasterAmbient
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/MasterAmbient
+  Guid:
+    Data1: -1397294688
+    Data2: 1317910575
+    Data3: 92051877
+    Data4: -147548708
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7632487231967852015}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10625
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,14 +469,23 @@ MonoBehaviour:
   - {fileID: 268166085548488349}
   - {fileID: -6130818129722946388}
   - {fileID: 3396715578656274706}
+  - {fileID: -3812381446795510424}
+  - {fileID: 5631494796367681817}
+  - {fileID: 8068333530595837480}
+  - {fileID: -1360634615404543656}
+  - {fileID: -7189691184964284299}
+  - {fileID: -7234582499714248864}
+  - {fileID: 8839649967036193544}
   EditorParameters:
   - {fileID: -9223296746091124392}
   - {fileID: 7048371391604433943}
+  - {fileID: -7832172223804989982}
+  - {fileID: 7876508242051133246}
   MasterBanks:
   - {fileID: 677030169936306072}
   StringsBanks:
   - {fileID: 375376122715364432}
-  cacheTime: 638761229843251227
+  cacheTime: 638778338111170155
   cacheVersion: 131616
 --- !u!114 &268166085548488349
 MonoBehaviour:
@@ -331,10 +529,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638761229843251227
+  lastModified: 638778338111170155
   FileSizes:
   - Name: 
-    Value: 2012
+    Value: 2416
   Exists: 1
 --- !u!114 &677030169936306072
 MonoBehaviour:
@@ -351,7 +549,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638761229843251227
+  lastModified: 638778338111144825
   FileSizes: []
   Exists: 1
 --- !u!114 &1517301360198671603
@@ -381,6 +579,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 341
+--- !u!114 &1610428005238455247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JumpLand/CaveDistance
+  m_EditorClassIdentifier: 
+  Name: CaveDistance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 290396128
+    data2: 748057984
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &2786607307696104749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,10 +617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character SFX/JumpLand
   Guid:
-    Data1: -312719776
-    Data2: 1085104078
-    Data3: -758622281
-    Data4: 864490121
+    Data1: 1412530857
+    Data2: 1322840769
+    Data3: 1527042959
+    Data4: -324483978
   Banks:
   - {fileID: 677030169936306072}
   IsStream: 0
@@ -406,6 +628,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 8046593727590851977}
+  - {fileID: 1610428005238455247}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -513,10 +736,39 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 6941212406773584059}
   MinDistance: 1
   MaxDistance: 20
-  Length: 60779
+  Length: 144935
+--- !u!114 &5631494796367681817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character SFX/AnotherOLD_JumpLand
+  m_EditorClassIdentifier: 
+  Path: event:/Character SFX/AnotherOLD_JumpLand
+  Guid:
+    Data1: -312719776
+    Data2: 1085104078
+    Data3: -758622281
+    Data4: 864490121
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3424371864264898230}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6014674520672356615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +877,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &6941212406773584059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VillageMusic/VillageLoopCounter
+  m_EditorClassIdentifier: 
+  Name: VillageLoopCounter
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1138921893
+    data2: 725380054
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7048371391604433943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +954,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 530
+--- !u!114 &7632487231967852015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MasterAmbient/CaveDistance
+  m_EditorClassIdentifier: 
+  Name: CaveDistance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 290396128
+    data2: 748057984
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7876508242051133246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VillageLoopCounter
+  m_EditorClassIdentifier: 
+  Name: VillageLoopCounter
+  StudioPath: parameter:/VillageLoopCounter
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1138921893
+    data2: 725380054
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8046593727590851977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,7 +1017,7 @@ MonoBehaviour:
   Name: Surface
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
   ID:
     data1: 3827329196
@@ -702,8 +1026,36 @@ MonoBehaviour:
   IsGlobal: 1
   Labels:
   - Grass
-  - Ground
+  - Stone
+  - Tile
   Exists: 1
+--- !u!114 &8068333530595837480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Amb_Cave
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Amb_Cave
+  Guid:
+    Data1: -1049706577
+    Data2: 1214836871
+    Data3: -1601467477
+    Data4: -2134077989
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &8456863293402552998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,3 +1110,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4943
+--- !u!114 &8839649967036193544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Tornado
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Tornado
+  Guid:
+    Data1: 245558059
+    Data2: 1318354911
+    Data3: 713605802
+    Data4: 779607691
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
