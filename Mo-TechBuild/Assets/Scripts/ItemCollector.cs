@@ -35,7 +35,7 @@ public class ItemCollector : MonoBehaviour
 
     void Update()
     {
-        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
+        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             CollectSpirit();
         }
@@ -95,7 +95,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (spiritUIText != null)
         {
-            spiritUIText.text = "Spirits: " + currentSpiritsAvailable;
+            spiritUIText.text = " " + currentSpiritsAvailable;
         }
     }
 

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f4e84bcdea11407186c252cb278b876
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Label_Ribbon00_M.prefab
+  uploadId: 627704

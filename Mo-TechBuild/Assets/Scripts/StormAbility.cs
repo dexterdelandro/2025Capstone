@@ -11,7 +11,7 @@ public class StormAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(stormKey))
+        if (Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             Vector3 spawnPos = transform.position + spawnOffset;
             GameObject storm = Instantiate(stormPrefab, spawnPos, Quaternion.identity);

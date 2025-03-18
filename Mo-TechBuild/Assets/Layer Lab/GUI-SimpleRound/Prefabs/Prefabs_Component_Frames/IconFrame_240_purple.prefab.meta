@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 77d5d20c4817140be9316867c17cfafd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/IconFrame_240_purple.prefab
+  uploadId: 627704

@@ -21,20 +21,21 @@ public class EarthPlatformSpawner : MonoBehaviour
     }
 
     void Update()
+{
+    // 监听键盘 G 键 或 手柄三角键 (JoystickButton3)
+    if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.JoystickButton3))
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (itemCollector != null && itemCollector.CanUseEarthAbility())
         {
-            if (itemCollector != null && itemCollector.CanUseEarthAbility())
-            {
-                TrySpawnPlatform();
-                itemCollector.UseSpirit(); // ʹ�� Spirit
-            }
-            else
-            {
-                Debug.Log("Not enough Spirits collected to use Earth Ability!");
-            }
+            TrySpawnPlatform();
+            itemCollector.UseSpirit(); // 消耗灵魂
+        }
+        else
+        {
+            Debug.Log("Not enough Spirits collected to use Earth Ability!");
         }
     }
+}
 
     void TrySpawnPlatform()
     {

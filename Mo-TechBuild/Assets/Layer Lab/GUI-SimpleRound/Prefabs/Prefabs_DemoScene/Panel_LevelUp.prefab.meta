@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38939394a79e3421298a7de622367a2d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Panel_LevelUp.prefab
+  uploadId: 627704

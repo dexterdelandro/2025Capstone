@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3059b7c5cff5a4d7b87ccb963a29d0f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/IconFrame_240_orange01.prefab
+  uploadId: 627704

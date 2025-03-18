@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5f114a289ab3d4df08c515dff8c8c807
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Sliders/Slider_IconType_Purple.prefab
+  uploadId: 627704

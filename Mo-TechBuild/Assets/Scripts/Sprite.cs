@@ -12,7 +12,7 @@ public class Spirit : MonoBehaviour
         {
             Debug.LogError("Canvas component not found. Ensure the object has a child with a Canvas component.");
         }
-        ShowPopUp(false); // 默认隐藏交互提示
+        ShowPopUp(false); 
     }
 
     public void ShowPopUp(bool state)

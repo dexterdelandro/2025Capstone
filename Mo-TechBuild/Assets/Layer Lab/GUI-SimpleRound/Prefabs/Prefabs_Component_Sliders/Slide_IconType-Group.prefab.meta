@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 45f4c3f08e747480d93abbce8a3f7ec9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Sliders/Slide_IconType-Group.prefab
+  uploadId: 627704

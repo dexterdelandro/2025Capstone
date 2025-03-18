@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 521562ebbaf4749bcabef09bc097559b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Popups/Popup01_White.prefab
+  uploadId: 627704

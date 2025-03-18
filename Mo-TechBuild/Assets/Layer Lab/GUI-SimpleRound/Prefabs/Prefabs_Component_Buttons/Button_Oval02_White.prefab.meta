@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 28c6f53b938a448beaf29ba48a476c90
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Buttons/Button_Oval02_White.prefab
+  uploadId: 627704

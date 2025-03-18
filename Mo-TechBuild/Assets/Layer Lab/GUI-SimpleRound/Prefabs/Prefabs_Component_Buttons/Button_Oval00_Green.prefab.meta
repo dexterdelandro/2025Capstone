@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 94f5c3361f33d43c197e207016f8e0bd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Buttons/Button_Oval00_Green.prefab
+  uploadId: 627704

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 701ce72d34af04f4292f1a29a8b37d46
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/IconFrame_180_gray.prefab
+  uploadId: 627704
