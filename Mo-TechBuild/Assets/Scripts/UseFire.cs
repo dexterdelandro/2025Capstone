@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class UseFire : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class UseFire : MonoBehaviour
     public BoxCollider flameHitBox;
 
     public bool isEmitting = false;
+
+    [SerializeField] private EventReference fireSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +39,7 @@ public class UseFire : MonoBehaviour
         isEmitting = true;
         itemCollector.UseSpirit();
         firePS.Play();
+        AudioManager.instance.PlayOneShot(fireSound, this.transform.position);
         flameHitBox.enabled = true;
         yield return new WaitForSeconds(0.75f);
         firePS.Stop(true,ParticleSystemStopBehavior.StopEmitting);

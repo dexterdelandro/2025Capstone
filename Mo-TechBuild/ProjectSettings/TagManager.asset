@@ -15,6 +15,9 @@ TagManager:
   - CinemachineTarget
   - Burnable
   - WaterPS
+  - Stone_Audio
+  - Grass_Audio
+  - Tile_Audio
   layers:
   - Default
   - TransparentFX
