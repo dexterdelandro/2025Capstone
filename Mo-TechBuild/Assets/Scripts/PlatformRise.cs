@@ -65,22 +65,4 @@ public class LiftObjectSmooth : MonoBehaviour
             }
         }
     }
-
-     // 玩家进入触发区域
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && triggerZone != null && other.gameObject == triggerZone)
-        {
-            isPlayerInRange = true;
-        }
-    }
-
-    // 玩家离开触发区域
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player") && triggerZone != null && other.gameObject == triggerZone)
-        {
-            isPlayerInRange = false;
-        }
-    }
 }
