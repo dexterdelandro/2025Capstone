@@ -15,6 +15,7 @@ TagManager:
   - CinemachineTarget
   - Burnable
   - WaterPS
+  - Ban
   layers:
   - Default
   - TransparentFX
