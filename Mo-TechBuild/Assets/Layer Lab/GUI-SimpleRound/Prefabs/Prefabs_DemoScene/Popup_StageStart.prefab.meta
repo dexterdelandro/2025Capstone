@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e1f0a0f0387894e5e8d492f529a9622b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Popup_StageStart.prefab
+  uploadId: 627704

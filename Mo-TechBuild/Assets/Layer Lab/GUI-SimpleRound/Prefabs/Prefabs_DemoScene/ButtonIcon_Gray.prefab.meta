@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 25022f376ae6f4df3b9d3b8ef9dcb001
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/ButtonIcon_Gray.prefab
+  uploadId: 627704

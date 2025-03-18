@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b1361c975656469495e44f70e865a8e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/Frame_Circle_96_White.prefab
+  uploadId: 627704

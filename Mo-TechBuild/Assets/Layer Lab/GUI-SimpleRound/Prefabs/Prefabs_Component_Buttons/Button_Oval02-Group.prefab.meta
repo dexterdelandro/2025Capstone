@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 56a22ab508456490e8d25e1456deb2b6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Buttons/Button_Oval02-Group.prefab
+  uploadId: 627704

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0ec09ccae3acc479a9a8da625eb7c487
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/IconFrame_240_green02.prefab
+  uploadId: 627704

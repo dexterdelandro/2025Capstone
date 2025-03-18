@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7d2a16e5ce3bf4a7d91651260b7ee8ef
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Popup_Ranking.prefab
+  uploadId: 627704

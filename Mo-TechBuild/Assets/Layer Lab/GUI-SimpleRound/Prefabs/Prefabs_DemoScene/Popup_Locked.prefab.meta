@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 69a74bafa46b94e5a8d7345c0208a436
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Popup_Locked.prefab
+  uploadId: 627704
