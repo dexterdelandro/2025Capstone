@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class TrailCircle : MonoBehaviour
 {
-
-    public float radius;
-
     public float speed;
 
     public GameObject trail;
@@ -12,6 +9,10 @@ public class TrailCircle : MonoBehaviour
     public Transform BanPos;
 
    private Vector3 centerPoint;
+
+   public float movementRange;
+
+   Collider playerCollider;
 
     [SerializeField]
    private bool didCollect = false;
@@ -26,13 +27,14 @@ public class TrailCircle : MonoBehaviour
     void Update()
     {
         if(!didCollect){
-            float x = centerPoint.x + Mathf.Cos(Time.time * speed) * radius;
-            float z = centerPoint.z + Mathf.Sin(Time.time * speed) * radius;
-            trail.transform.position = new Vector3(x, transform.position.y, z);
+            float y = centerPoint.y + Mathf.Sin(Time.time * speed) * movementRange;
+            trail.transform.position = new Vector3(transform.position.x, y, transform.position.z);
         }else{
             Vector3 targetDirection = (BanPos.position - trail.transform.position).normalized;
-            trail.transform.position += targetDirection * speed * Time.deltaTime;
+            trail.transform.position += targetDirection * speed * 2.5f * Time.deltaTime;
+            
             if(Vector3.Distance(trail.transform.position, BanPos.position)<0.5f){
+                playerCollider.GetComponent<ItemCollector>().CollectSpirit();
                 Destroy(gameObject);
             }
         }
@@ -42,6 +44,7 @@ public class TrailCircle : MonoBehaviour
     {
         //Debug.Log("Hey!");
         if(other.CompareTag("Player")){
+            playerCollider = other;
             didCollect = true;
         }
         
