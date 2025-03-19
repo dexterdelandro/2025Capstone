@@ -24,7 +24,9 @@ public class CompanionFollow : MonoBehaviour
     enum CurrentAction{
         Idle,
         Following,
-        Collecting
+        Collecting,
+
+        Waiting
     }
 
     CurrentAction currentAction = CurrentAction.Idle;
@@ -57,23 +59,23 @@ public class CompanionFollow : MonoBehaviour
 
     public float currDistance;
 
-    public string fileName;
+    // public string fileName;
 
-    [Space(10)]
-    [Header("-----Ink Caps-----")]
-    [SerializeField]
-    private float softCap1;
+    // [Space(10)]
+    // [Header("-----Ink Caps-----")]
+    // [SerializeField]
+    // private float softCap;
 
-    [SerializeField]
-    private float hardCap1;
+    // [SerializeField]
+    // private float hardCap;
 
-    [SerializeField]
-    private float softCap2;
+    // [SerializeField]
+    // private float softCap2;
 
-    [SerializeField]
-    private float hardCap2;
+    // [SerializeField]
+    // private float hardCap2;
 
-    public bool isStoic;
+    // public bool isStoic;
 
     public float _softCap;
 
@@ -123,13 +125,13 @@ public class CompanionFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        if(isStoic){
-            _softCap = softCap2;
-            _hardCap = hardCap2;
-        }else{
-            _softCap = softCap1;
-            _hardCap = hardCap1;
-        }
+        // if(isStoic){
+        //     _softCap = softCap2;
+        //     _hardCap = hardCap2;
+        // }else{
+        //     _softCap = softCap1;
+        //     _hardCap = hardCap1;
+        // }
         movementSpeed = StartingMoveSpeed;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -155,9 +157,10 @@ public class CompanionFollow : MonoBehaviour
     {
         if(Manager.Instance.GetGameState() != Manager.GameState.Playing) return;
 
-        LogData();
 
-        if(currentAction==CurrentAction.Collecting)return;
+        if(currentAction==CurrentAction.Waiting)return;
+
+        HandleInkLevel();
 
         agent.speed = movementSpeed;
         currDistance = Vector3.Distance(transform.position, player.transform.position);
@@ -189,22 +192,22 @@ public class CompanionFollow : MonoBehaviour
         // }
     }
 
-    private void CheckTarget(){
-        Ray ray = mainCamera.ScreenPointToRay(centerdot.position);
-        RaycastHit hit;
+    // private void CheckTarget(){
+    //     Ray ray = mainCamera.ScreenPointToRay(centerdot.position);
+    //     RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 20.0f, spriteLayer)){
-            Debug.Log("SPrite found :D");
-            currentAction = CurrentAction.Collecting;
-            agent.SetDestination(hit.transform.position);
-            StartCoroutine(StartCollecting());
-        }
-    }
+    //     if(Physics.Raycast(ray, out hit, 20.0f, spriteLayer)){
+    //         Debug.Log("SPrite found :D");
+    //         currentAction = CurrentAction.Collecting;
+    //         agent.SetDestination(hit.transform.position);
+    //         StartCoroutine(StartCollecting());
+    //     }
+    // }
 
-    private IEnumerator StartCollecting(){
-        yield return new WaitForSeconds(collectionTime);
-        currentAction = CurrentAction.Idle;
-    }
+    // private IEnumerator StartCollecting(){
+    //     yield return new WaitForSeconds(collectionTime);
+    //     currentAction = CurrentAction.Idle;
+    // }
 
     private IEnumerator DisplayComplaint(){
         GenerateNewComplaint();
@@ -229,38 +232,25 @@ public class CompanionFollow : MonoBehaviour
         previousComplaints.Enqueue(chosen);
     }
 
-    private void LogData(){
-        time += Time.deltaTime;
-        if(time>=1.0f){ //log ink level every second
-            time = 0;
-            avgInk += currentInkLevel;
-            avgInkCounter++;
-        }
-
+    private void HandleInkLevel(){
         if(currentInkLevel>=_hardCap){
             overSoftCap = false;
             if(!overHardCap){ //if just crossed cap
                  overHardCap = true;
-                 overHardCapList.Add(Manager.Instance.GetTimeStamp());
             }
             timeOverHardCap+= Time.deltaTime;
             if(timeOverHardCap>=nextHardCapComplaintTime){
-                if(isStoic){
-                    nextHardCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
-                }else{
-                    nextHardCapComplaintTime += UnityEngine.Random.Range(10.0f, 30.0f);
-                }
+                nextHardCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
                 StartCoroutine(DisplayComplaint());
             }
         }else if (currentInkLevel>=_softCap){
             overHardCap = false;
             if(!overSoftCap){ //if just crossed cap
                 overSoftCap = true;
-                 overSoftCapList.Add(Manager.Instance.GetTimeStamp());
             }
             timeOverSoftCap += Time.deltaTime;
-            if(!isStoic && timeOverSoftCap>nextSoftCapComplaintTime){
-                nextSoftCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
+            if(timeOverSoftCap>nextSoftCapComplaintTime){
+                nextSoftCapComplaintTime += UnityEngine.Random.Range(12.0f, 24.0f);
                 StartCoroutine(DisplayComplaint());
             }
         }else{
@@ -269,54 +259,94 @@ public class CompanionFollow : MonoBehaviour
         }
     }
 
-    public void PrintData(){
+    // private void LogData(){
+    //     time += Time.deltaTime;
+    //     if(time>=1.0f){ //log ink level every second
+    //         time = 0;
+    //         avgInk += currentInkLevel;
+    //         avgInkCounter++;
+    //     }
 
-        string clipboardcopy="";
-        if(isStoic){
-            clipboardcopy += "Stoic,";
-        }else{
-            clipboardcopy += "Sensitive,";
-        }
-        clipboardcopy+=avgInk/avgInkCounter + "," + timeOverSoftCap + "," + overSoftCapList.Count + ",";
-        foreach(float timestamp in overSoftCapList){
-            clipboardcopy+=timestamp+",";
-        }
-        clipboardcopy +="," + timeOverHardCap + "," + overHardCapList.Count+",";
-        foreach(float timestamp in overHardCapList){
-            clipboardcopy+=timestamp + ",";
-        }
-        clipboardcopy +="done";
-        GUIUtility.systemCopyBuffer = clipboardcopy;
+    //     if(currentInkLevel>=_hardCap){
+    //         overSoftCap = false;
+    //         if(!overHardCap){ //if just crossed cap
+    //              overHardCap = true;
+    //              overHardCapList.Add(Manager.Instance.GetTimeStamp());
+    //         }
+    //         timeOverHardCap+= Time.deltaTime;
+    //         if(timeOverHardCap>=nextHardCapComplaintTime){
+    //             if(isStoic){
+    //                 nextHardCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
+    //             }else{
+    //                 nextHardCapComplaintTime += UnityEngine.Random.Range(10.0f, 30.0f);
+    //             }
+    //             StartCoroutine(DisplayComplaint());
+    //         }
+    //     }else if (currentInkLevel>=_softCap){
+    //         overHardCap = false;
+    //         if(!overSoftCap){ //if just crossed cap
+    //             overSoftCap = true;
+    //              overSoftCapList.Add(Manager.Instance.GetTimeStamp());
+    //         }
+    //         timeOverSoftCap += Time.deltaTime;
+    //         if(!isStoic && timeOverSoftCap>nextSoftCapComplaintTime){
+    //             nextSoftCapComplaintTime += UnityEngine.Random.Range(20.0f, 40.0f);
+    //             StartCoroutine(DisplayComplaint());
+    //         }
+    //     }else{
+    //         overSoftCap = false;
+    //         overHardCap = false;
+    //     }
+    // }
 
-        //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
-        string path = Application.dataPath + "/data.txt";
-        //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
-        //Debug.Log("File Written to: " + path);
+    // public void PrintData(){
 
-        StreamWriter writer = new StreamWriter(path, false);
-        if(isStoic){
-            writer.Write("Stoic,");
-        }else{
-            writer.Write("Sensitive,");
-        }
-        writer.Write(avgInk/avgInkCounter+",");
+    //     string clipboardcopy="";
+    //     if(isStoic){
+    //         clipboardcopy += "Stoic,";
+    //     }else{
+    //         clipboardcopy += "Sensitive,";
+    //     }
+    //     clipboardcopy+=avgInk/avgInkCounter + "," + timeOverSoftCap + "," + overSoftCapList.Count + ",";
+    //     foreach(float timestamp in overSoftCapList){
+    //         clipboardcopy+=timestamp+",";
+    //     }
+    //     clipboardcopy +="," + timeOverHardCap + "," + overHardCapList.Count+",";
+    //     foreach(float timestamp in overHardCapList){
+    //         clipboardcopy+=timestamp + ",";
+    //     }
+    //     clipboardcopy +="done";
+    //     GUIUtility.systemCopyBuffer = clipboardcopy;
 
-        writer.Write(timeOverSoftCap+",");
-        writer.Write(overSoftCapList.Count+",");
-        foreach(float timestamp in overSoftCapList){
-            writer.Write(timestamp+",");
-        }
+    //     //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
+    //     string path = Application.dataPath + "/data.txt";
+    //     //Format: Stoic, Average Ink Level, # times over soft cap, # times over hard cap, ,list of timestamps, done
+    //     //Debug.Log("File Written to: " + path);
 
-        writer.Write(",");
-        writer.Write(timeOverHardCap+",");
-        writer.Write(overHardCapList.Count+",");
-        foreach(float timestamp in overHardCapList){
-            writer.Write(timestamp+",");
-        }
+    //     StreamWriter writer = new StreamWriter(path, false);
+    //     if(isStoic){
+    //         writer.Write("Stoic,");
+    //     }else{
+    //         writer.Write("Sensitive,");
+    //     }
+    //     writer.Write(avgInk/avgInkCounter+",");
 
-        writer.Write("done");
-        writer.Close();
+    //     writer.Write(timeOverSoftCap+",");
+    //     writer.Write(overSoftCapList.Count+",");
+    //     foreach(float timestamp in overSoftCapList){
+    //         writer.Write(timestamp+",");
+    //     }
 
-        Debug.Log("File written to: " + path);
-    }
+    //     writer.Write(",");
+    //     writer.Write(timeOverHardCap+",");
+    //     writer.Write(overHardCapList.Count+",");
+    //     foreach(float timestamp in overHardCapList){
+    //         writer.Write(timestamp+",");
+    //     }
+
+    //     writer.Write("done");
+    //     writer.Close();
+
+    //     Debug.Log("File written to: " + path);
+    // }
 }
