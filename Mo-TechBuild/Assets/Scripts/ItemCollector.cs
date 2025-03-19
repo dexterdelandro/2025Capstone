@@ -19,8 +19,8 @@ public class ItemCollector : MonoBehaviour
     private FMOD.Studio.EventInstance absorb;
 
     [Header("Animation Settings")]
-    public Animator characterAnimator; // 角色的 Animator
-    public string collectAnimationTrigger = "Collect"; // 触发动画的参数
+ //   public Animator characterAnimator; // 角色的 Animator
+    //public string collectAnimationTrigger = "Collect"; // 触发动画的参数
 
     [SerializeField] private EventReference absorbSound;
 
@@ -41,34 +41,33 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
-    private void CollectSpirit()
+    public void CollectSpirit()
     {
-        if (currentSpirit != null)
-        {
-            totalCollectedSpirits++;
-            currentSpiritsAvailable++;
-            companion.UpdateNumCollectedSprites(currentSpiritsAvailable);
+        // if (currentSpirit != null)
+        // {
+        totalCollectedSpirits++;
+        currentSpiritsAvailable++;
+        companion.UpdateNumCollectedSprites(currentSpiritsAvailable);
 
-            UpdateSpiritUI();
+        UpdateSpiritUI();
 
             // 播放收集声音
             //if (spiritCollectSound != null && audioSource != null)
             //{
-            //    audioSource.PlayOneShot(spiritCollectSound);
+            //audioSource.PlayOneShot(spiritCollectSound);
             //}
 
             AudioManager.instance.PlayOneShot(absorbSound, this.transform.position);
             //FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
 
             // 触发收集动画
-            if (characterAnimator != null)
-            {
-                characterAnimator.SetTrigger(collectAnimationTrigger);
-            }
+            // if (characterAnimator != null)
+            // {
+            //     characterAnimator.SetTrigger(collectAnimationTrigger);
+            // }
 
-            currentSpirit.DestroySpirit();
-            currentSpirit = null;
-        }
+            //currentSpirit.DestroySpirit();
+            //currentSpirit = null;
     }
 
     public bool CanUseEarthAbility()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.VFX;
 using FMODUnity;
 
 public class UseFire : MonoBehaviour
@@ -7,7 +8,6 @@ public class UseFire : MonoBehaviour
 
     public ItemCollector itemCollector;
     public ParticleSystem firePS;
-
     public BoxCollider flameHitBox;
 
     public bool isEmitting = false;
@@ -41,7 +41,7 @@ public class UseFire : MonoBehaviour
         firePS.Play();
         AudioManager.instance.PlayOneShot(fireSound, this.transform.position);
         flameHitBox.enabled = true;
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1.75f);
         firePS.Stop(true,ParticleSystemStopBehavior.StopEmitting);
         flameHitBox.enabled = false;
         isEmitting = false;
