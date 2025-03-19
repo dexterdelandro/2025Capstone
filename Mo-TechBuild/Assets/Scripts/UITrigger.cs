@@ -14,6 +14,8 @@ public class UITrigger : MonoBehaviour
     private bool isPlayerInside = false; // 是否在触发区域内
     private bool isUIVisible = false; // UI 是否可见
 
+    public CompanionFollow companion;
+
     void Start()
     {
         if (uiPanel != null)
@@ -38,6 +40,7 @@ public class UITrigger : MonoBehaviour
             {
                 Debug.Log("Closing UI");
                 HideUI();
+                if(companion!=null)companion.StartCompanion();
             }
         }
     }

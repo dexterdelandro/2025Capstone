@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class ObjectTransparency : MonoBehaviour
 {
@@ -9,11 +11,14 @@ public class ObjectTransparency : MonoBehaviour
     private Color originalColor;
     private float transparency = 0f;
     private bool isFading = false;
-    private Transform player;
+    public Transform player;
     private MeshCollider meshCollider; // Reference to MeshCollider
+
+    public NavMeshObstacle blocker;
 
     void Start()
     {
+        //blocker = GetComponentInChildren<NavMeshObstacle>();
         // Get the material of the object
         material = GetComponent<Renderer>().material;
         originalColor = material.color;
@@ -29,7 +34,7 @@ public class ObjectTransparency : MonoBehaviour
         SetTransparency(0f);
 
         // Find the player
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        //player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -68,6 +73,8 @@ public class ObjectTransparency : MonoBehaviour
         }
 
         isFading = false;
+
+        blocker.gameObject.SetActive(false);
     }
 
     private void SetTransparency(float alpha)

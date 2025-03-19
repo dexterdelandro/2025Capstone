@@ -32,10 +32,10 @@ public class TrailCircle : MonoBehaviour
             trail.transform.position = new Vector3(transform.position.x, y, transform.position.z);
         }else{
             Vector3 targetDirection = (BanPos.position - trail.transform.position).normalized;
-            trail.transform.position += targetDirection * speed * 2.5f * Time.deltaTime;
+            trail.transform.position += targetDirection * speed * 8.0f * Time.deltaTime;
             
             if(Vector3.Distance(trail.transform.position, BanPos.position)<0.5f){
-                //playerCollider.GetComponent<ItemCollector>().CollectSpirit();
+                playerCollider.GetComponent<ItemCollector>().CollectSpirit();
                 Destroy(gameObject);
             }
         }
