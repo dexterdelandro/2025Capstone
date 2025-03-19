@@ -43,7 +43,7 @@ public class ObjectTransparency : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) <= activationRange)
         {
             // Check for 'P' key press
-            if (Input.GetKeyDown(KeyCode.P) && !isFading)
+            if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0)) && !isFading)
             {
                 Debug.Log("WOrks");
                 StartCoroutine(FadeIn());
