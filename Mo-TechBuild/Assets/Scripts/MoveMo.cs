@@ -35,7 +35,7 @@ public class TrailCircle : MonoBehaviour
             trail.transform.position += targetDirection * speed * 2.5f * Time.deltaTime;
             
             if(Vector3.Distance(trail.transform.position, BanPos.position)<0.5f){
-                playerCollider.GetComponent<ItemCollector>().CollectSpirit();
+                //playerCollider.GetComponent<ItemCollector>().CollectSpirit();
                 Destroy(gameObject);
             }
         }

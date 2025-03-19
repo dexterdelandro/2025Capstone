@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     private static Manager _instance;
@@ -72,6 +72,7 @@ public class Manager : MonoBehaviour
     void LoadScene(){
         
     }
+    
 
     public void EnablePause(){
         gamestate = GameState.Pause;
@@ -88,5 +89,10 @@ public class Manager : MonoBehaviour
        // Cursor.lockState = CursorLockMode.Locked;
         GameUI.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene("Level GDC_Audio");
     }
 }
