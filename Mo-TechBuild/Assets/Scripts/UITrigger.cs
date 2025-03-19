@@ -7,8 +7,9 @@ public class UITrigger : MonoBehaviour
     public GameObject uiPanel;   // 关联的 UI 界面
 
     [Header("Button")]
-    public string openButton = "joystick button 0";
-    public string closeButton = "joystick button 8"; 
+    public string openButton = "joystick button 0"; // 打开 UI 的按键
+    public string closeButton = "joystick button 8"; // 关闭 UI 的按键
+    public KeyCode toggleKey = KeyCode.E; // 额外的键盘按键（E 键）
 
     private bool isPlayerInside = false; // 是否在触发区域内
     private bool isUIVisible = false; // UI 是否可见
@@ -25,14 +26,11 @@ public class UITrigger : MonoBehaviour
     {
         if (isPlayerInside)
         {
-            
-            if (Input.GetKeyDown(openButton) && !isUIVisible)
+            if ((Input.GetKeyDown(openButton) || Input.GetKeyDown(toggleKey)) && !isUIVisible)
             {
                 ShowUI();
             }
-
-            
-            if (Input.GetKeyDown(closeButton) && isUIVisible)
+            else if ((Input.GetKeyDown(closeButton) || Input.GetKeyDown(toggleKey)) && isUIVisible)
             {
                 HideUI();
             }
@@ -69,7 +67,7 @@ public class UITrigger : MonoBehaviour
     // 离开触发区域
     private void OnTriggerExit(Collider other)
     {
-        if (triggerZone != null && other == triggerZone)
+        if (triggerZone != null && other.CompareTag("Player"))
         {
             isPlayerInside = false;
             HideUI(); // 离开时自动隐藏 UI
