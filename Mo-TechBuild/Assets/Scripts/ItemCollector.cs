@@ -35,10 +35,10 @@ public class ItemCollector : MonoBehaviour
 
     void Update()
     {
-        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0))
-        {
-            CollectSpirit();
-        }
+        // if (canCollectSpirit && Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0))
+        // {
+        //     CollectSpirit();
+        // }
     }
 
     public void CollectSpirit()
