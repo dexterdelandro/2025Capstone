@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 09a3cd707de5d4819850317b391cc7d0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/ButtonIcon_Blue.prefab
+  uploadId: 627704

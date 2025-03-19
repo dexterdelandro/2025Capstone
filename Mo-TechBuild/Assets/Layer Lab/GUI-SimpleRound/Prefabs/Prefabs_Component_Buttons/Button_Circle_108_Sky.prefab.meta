@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fbc72280df0fb4a709ae7136749ecef9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Buttons/Button_Circle_108_Sky.prefab
+  uploadId: 627704

@@ -1,35 +1,41 @@
 using UnityEngine;
-using TMPro; 
+using TMPro;
+using FMODUnity;
 
 public class ItemCollector : MonoBehaviour
 {
-    public int totalCollectedSpirits = 0; 
-    public int currentSpiritsAvailable = 5; 
-    public TextMeshProUGUI spiritUIText; 
+    public int totalCollectedSpirits = 0;
+    public int currentSpiritsAvailable = 5;
+    public TextMeshProUGUI spiritUIText;
 
-    private bool canCollectSpirit = false; 
-    private Spirit currentSpirit; 
+    private bool canCollectSpirit = false;
+    private Spirit currentSpirit;
 
     public CompanionFollow companion;
 
     [Header("Audio Settings")]
-    public AudioClip spiritCollectSound; 
-    private AudioSource audioSource; 
+    public AudioClip spiritCollectSound;
+    private AudioSource audioSource;
     private FMOD.Studio.EventInstance absorb;
+
+    [Header("Animation Settings")]
+    public Animator characterAnimator; // 角色的 Animator
+    public string collectAnimationTrigger = "Collect"; // 触发动画的参数
+
+    [SerializeField] private EventReference absorbSound;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>(); 
-        }
+        //audioSource = GetComponent<AudioSource>();
+        //if (audioSource == null)
+        //{
+        //    audioSource = gameObject.AddComponent<AudioSource>();
+        //}
     }
 
     void Update()
     {
-        
-        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E))
+        if (canCollectSpirit && Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             CollectSpirit();
         }
@@ -39,16 +45,28 @@ public class ItemCollector : MonoBehaviour
     {
         if (currentSpirit != null)
         {
-            totalCollectedSpirits++; 
-            currentSpiritsAvailable++; 
+            totalCollectedSpirits++;
+            currentSpiritsAvailable++;
             companion.UpdateNumCollectedSprites(currentSpiritsAvailable);
 
             UpdateSpiritUI();
 
-            
-           
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Interactions/Absorb");
-            currentSpirit.DestroySpirit(); 
+            // 播放收集声音
+            //if (spiritCollectSound != null && audioSource != null)
+            //{
+            //    audioSource.PlayOneShot(spiritCollectSound);
+            //}
+
+            AudioManager.instance.PlayOneShot(absorbSound, this.transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Absorb");
+
+            // 触发收集动画
+            if (characterAnimator != null)
+            {
+                characterAnimator.SetTrigger(collectAnimationTrigger);
+            }
+
+            currentSpirit.DestroySpirit();
             currentSpirit = null;
         }
     }
@@ -58,7 +76,6 @@ public class ItemCollector : MonoBehaviour
         return currentSpiritsAvailable > 0;
     }
 
-   
     public void UseSpirit()
     {
         if (currentSpiritsAvailable > 0)
@@ -78,7 +95,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (spiritUIText != null)
         {
-            spiritUIText.text = "Spirits: " + currentSpiritsAvailable;
+            spiritUIText.text = " " + currentSpiritsAvailable;
         }
     }
 
@@ -91,7 +108,7 @@ public class ItemCollector : MonoBehaviour
 
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(true); 
+                currentSpirit.ShowPopUp(true);
             }
         }
     }
@@ -103,7 +120,7 @@ public class ItemCollector : MonoBehaviour
             canCollectSpirit = false;
             if (currentSpirit != null)
             {
-                currentSpirit.ShowPopUp(false); 
+                currentSpirit.ShowPopUp(false);
                 currentSpirit = null;
             }
         }

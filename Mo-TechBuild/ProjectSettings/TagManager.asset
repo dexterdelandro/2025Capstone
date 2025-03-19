@@ -16,6 +16,9 @@ TagManager:
   - Burnable
   - WaterPS
   - Ban
+  - Stone_Audio
+  - Grass_Audio
+  - Tile_Audio
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f54b369f2afdd4bedab3765bd8a6a672
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Status-Group_White.prefab
+  uploadId: 627704

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 502d87ef2f95c4671b391df4e6fb21dd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/TableFrame00.prefab
+  uploadId: 627704

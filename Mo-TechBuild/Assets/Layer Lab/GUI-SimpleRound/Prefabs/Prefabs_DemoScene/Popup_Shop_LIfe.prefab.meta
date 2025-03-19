@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d6bb91dc4837439b8f33fcfc73ef617
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_DemoScene/Popup_Shop_LIfe.prefab
+  uploadId: 627704

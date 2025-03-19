@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec28f520ddf1a4dc8bffb5fe354e4122
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Frames/IconFrame_180_yellow01.prefab
+  uploadId: 627704

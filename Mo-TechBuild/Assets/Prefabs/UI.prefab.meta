@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Mo-TechBuild/Assets/ImportAssert.meta
+guid: 3d11e1c4ea2f4418895b433498709c95
+folderAsset: yes
+DefaultImporter:
+========
 guid: ef8f9724810e10c43b7e0774af1df633
 PrefabImporter:
+>>>>>>>> main:Mo-TechBuild/Assets/Prefabs/UI.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

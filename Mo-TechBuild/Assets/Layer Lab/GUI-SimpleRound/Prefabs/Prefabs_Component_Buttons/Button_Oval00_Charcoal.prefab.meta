@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bce2fb220114345ee84a07464899a4df
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_Buttons/Button_Oval00_Charcoal.prefab
+  uploadId: 627704

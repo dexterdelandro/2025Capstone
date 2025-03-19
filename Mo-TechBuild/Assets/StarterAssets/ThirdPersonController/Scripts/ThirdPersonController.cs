@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
+using FMODUnity;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -28,9 +29,9 @@ namespace StarterAssets
         [Tooltip("Acceleration and deceleration")]
         public float SpeedChangeRate = 10.0f;
 
-        public AudioClip LandingAudioClip;
-        public AudioClip[] FootstepAudioClips;
-        [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
+        //public AudioClip LandingAudioClip;
+        //public AudioClip[] FootstepAudioClips;
+        //[Range(0, 1)] public float FootstepAudioVolume = 0.5f;
 
         [Space(10)]
         [Tooltip("The height the player can jump")]
@@ -97,6 +98,10 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+
+        // audio references
+        [SerializeField] private EventReference footstepSound;
+        [SerializeField] private EventReference jumplandSound;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -282,7 +287,7 @@ namespace StarterAssets
         private void JumpAndGravity()
         {
             // **防止风暴影响被 `Gravity` 覆盖**
-            StormController storm = FindObjectOfType<StormController>();
+            StormController storm = FindAnyObjectByType<StormController>();
             bool playerInStorm = storm != null && storm.IsPlayerInStorm();
 
             if (!playerInStorm) // 只有当玩家不在风暴中时才使用重力
@@ -363,10 +368,11 @@ namespace StarterAssets
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
         }
-        
+
         private void OnFootstep(AnimationEvent animationEvent)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/OLD_Footstep");
+            AudioManager.instance.PlayOneShot(footstepSound, this.transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/OLD_Footstep");
             /*
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
@@ -381,7 +387,8 @@ namespace StarterAssets
 
         private void OnLand(AnimationEvent animationEvent)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/JumpLand");
+            AudioManager.instance.PlayOneShot(jumplandSound, this.transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Character SFX/JumpLand");
             /*
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
@@ -389,6 +396,6 @@ namespace StarterAssets
             }
             */
         }
-        
+
     }
 }

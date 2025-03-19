@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 769c1fc5423e34ec38492828c7159f03
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Notify_Notice_White.prefab
+  uploadId: 627704

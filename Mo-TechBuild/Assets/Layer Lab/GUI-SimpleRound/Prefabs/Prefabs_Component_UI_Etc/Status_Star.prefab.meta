@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f53bcecc1e6c7452ea309eae22ae0195
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19031
+  packageName: GUI - Simple Round
+  packageVersion: 2.0.0
+  assetPath: Assets/Layer Lab/GUI-SimpleRound/Prefabs/Prefabs_Component_UI_Etc/Status_Star.prefab
+  uploadId: 627704
