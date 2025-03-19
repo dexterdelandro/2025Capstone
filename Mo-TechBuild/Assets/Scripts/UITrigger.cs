@@ -60,6 +60,7 @@ public class UITrigger : MonoBehaviour
     {
         if (triggerZone != null && other.CompareTag("Player"))
         {
+            Debug.Log("in");
             isPlayerInside = true;
         }
     }

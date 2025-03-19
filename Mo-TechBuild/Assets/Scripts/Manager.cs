@@ -50,13 +50,14 @@ public class Manager : MonoBehaviour
     {
         switch(gamestate){
             case GameState.Playing:
-                if(Input.GetKeyDown(KeyCode.Escape)){
+                if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton9))
+                {
                     EnablePause();
                 }
                 
                 break;
             case GameState.Pause:
-                if(Input.GetKeyDown(KeyCode.Escape)){
+                if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton9)){
                     ResumePlay();
                 }
                 break;
@@ -75,7 +76,7 @@ public class Manager : MonoBehaviour
     public void EnablePause(){
         gamestate = GameState.Pause;
         Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
         GameUI.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(true);
     }
@@ -84,7 +85,7 @@ public class Manager : MonoBehaviour
         pauseCanvas.gameObject.SetActive(false);
         gamestate = GameState.Playing;
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
         GameUI.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
     }
