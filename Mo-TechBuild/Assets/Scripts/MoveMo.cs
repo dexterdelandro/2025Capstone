@@ -27,6 +27,7 @@ public class TrailCircle : MonoBehaviour
     void Update()
     {
         if(!didCollect){
+
             float y = centerPoint.y + Mathf.Sin(Time.time * speed) * movementRange;
             trail.transform.position = new Vector3(transform.position.x, y, transform.position.z);
         }else{
