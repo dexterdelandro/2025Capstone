@@ -37,7 +37,7 @@ public class ItemCollector : MonoBehaviour
     {
         // if (canCollectSpirit && Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0))
         // {
-        //     CollectSpirit();
+        //     CollectSpirit()d;
         // }
     }
 
