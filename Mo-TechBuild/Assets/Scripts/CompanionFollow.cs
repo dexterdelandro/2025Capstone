@@ -134,6 +134,7 @@ public class CompanionFollow : MonoBehaviour
         // }
         movementSpeed = StartingMoveSpeed;
         agent = GetComponent<NavMeshAgent>();
+        currentAction = CurrentAction.Waiting;
     }
 
     public void UpdateNumCollectedSprites(int num){
@@ -148,13 +149,18 @@ public class CompanionFollow : MonoBehaviour
         if(currentInkLevel>_softCap){
             movementSpeed = (1.0f-(num*0.1f))*StartingMoveSpeed;
         }else{
-            movementSpeed = 5;
+            movementSpeed = StartingMoveSpeed;
         }
+    }
+
+    public void StartCompanion(){
+        currentAction = CurrentAction.Idle;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if(Manager.Instance.GetGameState() != Manager.GameState.Playing) return;
 
 
