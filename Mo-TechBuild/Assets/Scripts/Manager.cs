@@ -2,6 +2,7 @@ using StarterAssets;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 public class Manager : MonoBehaviour
 {
     private static Manager _instance;
@@ -19,6 +20,7 @@ public class Manager : MonoBehaviour
     public ThirdPersonController playerController;
 
     public bool didFinishTutorial = false;
+
 
     public enum GameState{
         Playing,
@@ -53,6 +55,11 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+                restart();
+            }
         switch(gamestate){
             case GameState.Playing:
                 if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton9))
@@ -100,6 +107,7 @@ public class Manager : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene("Level GDC_Audio");
+        //AudioManager.instance.PlayOneShot(startSong, this.transform.position);
         didFinishTutorial = false;
     }
 
