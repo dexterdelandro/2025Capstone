@@ -123,6 +123,8 @@ public class CompanionFollow : MonoBehaviour
 
     [SerializeField]
     private float avgInkCounter;
+
+    public GameObject Canvas_Tutorial_Skill;
     NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
@@ -158,6 +160,7 @@ public class CompanionFollow : MonoBehaviour
     public void StartCompanion(){
         currentAction = CurrentAction.Idle;
         countUI.gameObject.SetActive(true);
+        Canvas_Tutorial_Skill.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
