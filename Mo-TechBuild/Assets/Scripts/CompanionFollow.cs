@@ -52,6 +52,7 @@ public class CompanionFollow : MonoBehaviour
     private float movementSpeed;
 
     public float StartingMoveSpeed;
+    public float minMoveSpeed;
     public float minStartDistance; //the distance away from player to START following
 
     public float minEndDistance;
@@ -148,7 +149,7 @@ public class CompanionFollow : MonoBehaviour
         }
         
         if(currentInkLevel>_softCap){
-            movementSpeed = (1.0f-(num*0.1f))*StartingMoveSpeed;
+            movementSpeed = Mathf.Max(minMoveSpeed,(1.0f-(num*0.1f))*StartingMoveSpeed);
         }else{
             movementSpeed = StartingMoveSpeed;
         }
