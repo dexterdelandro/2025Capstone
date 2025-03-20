@@ -155,6 +155,9 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            Time.timeScale = 0;
+            LockCameraPosition = true;
         }
 
         private void Update()

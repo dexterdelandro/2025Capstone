@@ -1,3 +1,4 @@
+using StarterAssets;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,10 @@ public class Manager : MonoBehaviour
     public Canvas GameUI;
 
     public float startTime;
+
+    public ThirdPersonController playerController;
+
+    public bool didFinishTutorial = false;
 
     public enum GameState{
         Playing,
@@ -75,8 +80,9 @@ public class Manager : MonoBehaviour
     
 
     public void EnablePause(){
+        PauseControls();
         gamestate = GameState.Pause;
-        Time.timeScale = 0;
+
         //Cursor.lockState = CursorLockMode.None;
         GameUI.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(true);
@@ -85,14 +91,44 @@ public class Manager : MonoBehaviour
     public void ResumePlay(){
         pauseCanvas.gameObject.SetActive(false);
         gamestate = GameState.Playing;
-        Time.timeScale = 1;
        // Cursor.lockState = CursorLockMode.Locked;
-        GameUI.gameObject.SetActive(true);
+        if(didFinishTutorial)GameUI.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
+        ResumeControls();
     }
 
     public void restart()
     {
         SceneManager.LoadScene("Level GDC_Audio");
+        didFinishTutorial = false;
+    }
+
+    public void TutorialEnd(){
+        didFinishTutorial = true;
+        ResumeControls();
+    }
+
+    public void PauseControls(){
+        if(playerController==null){
+            playerController = FindAnyObjectByType<ThirdPersonController>();
+        }
+
+        if(playerController){
+            playerController.LockCameraPosition = true;
+            Time.timeScale = 0;
+        }
+
+
+    }
+
+    public void ResumeControls(){
+        if(playerController==null){
+            playerController = FindAnyObjectByType<ThirdPersonController>();
+        }
+
+        if(playerController){
+            playerController.LockCameraPosition = false;
+            Time.timeScale = 1;
+        }
     }
 }

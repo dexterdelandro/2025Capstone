@@ -15,10 +15,8 @@ public class CompanionFollow : MonoBehaviour
 
     public float collectionTime;
 
-    public RectTransform centerdot;
-    public Camera mainCamera;
-
     private Queue<string> previousComplaints = new Queue<string>();
+
 
     public LayerMask spriteLayer;
     enum CurrentAction{
@@ -41,6 +39,9 @@ public class CompanionFollow : MonoBehaviour
 
     [SerializeField]
     private Canvas dialogueUI;
+
+    [SerializeField]
+    private Canvas countUI;
 
     [SerializeField]
     private TMP_Text complaintText;
@@ -155,6 +156,7 @@ public class CompanionFollow : MonoBehaviour
 
     public void StartCompanion(){
         currentAction = CurrentAction.Idle;
+        countUI.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
