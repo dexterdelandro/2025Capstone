@@ -1,6 +1,8 @@
 using UnityEditor;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 public class Manager : MonoBehaviour
 {
     private static Manager _instance;
@@ -14,6 +16,18 @@ public class Manager : MonoBehaviour
     public Canvas GameUI;
 
     public float startTime;
+
+    public GameObject player;
+
+    public CompanionFollow companion;
+
+    public List<UITrigger> checkpoints;
+    
+    [SerializeField]
+    private Vector3 savedPlayerLocation;
+
+    [SerializeField]
+    private Vector3 savedCompanionLocation;
 
     public enum GameState{
         Playing,
@@ -68,10 +82,6 @@ public class Manager : MonoBehaviour
     public void QuitGame(){
         Application.Quit();
     }
-
-    void LoadScene(){
-        
-    }
     
 
     public void EnablePause(){
@@ -94,5 +104,29 @@ public class Manager : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene("Level GDC_Audio");
+    }
+
+    public void PlayerDied(){
+        if(player==null)return;
+        
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = savedPlayerLocation;
+        player.GetComponent<CharacterController>().enabled = true;
+
+        companion.GetComponent<NavMeshAgent>().isStopped = true;
+        companion.transform.position = savedCompanionLocation;
+        companion.GetComponent<NavMeshAgent>().isStopped = false;
+        //companion.StartCompanion();
+
+        EnablePause();
+    }
+
+    public GameObject GetPlayer(){
+        return player;
+    }
+
+    public void UpdateSavedLocation(){
+        savedPlayerLocation = player.transform.position;
+        savedCompanionLocation = companion.transform.position;
     }
 }

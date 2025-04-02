@@ -22,7 +22,7 @@ public class PlayerRespawn : MonoBehaviour
         {
             Debug.Log("touch water");
             
-            Manager.Instance.restart();
+            Manager.Instance.PlayerDied();
             
           
         }

@@ -155,6 +155,8 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+            
+            Manager.Instance.UpdateSavedLocation();
         }
 
         private void Update()

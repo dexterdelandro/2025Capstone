@@ -19,6 +19,7 @@ TagManager:
   - Stone_Audio
   - Grass_Audio
   - Tile_Audio
+  - FirePS
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - UI
   - WaterAbility
   - Traversable
-  - 
+  - FireAbility
   - 
   - 
   - 
