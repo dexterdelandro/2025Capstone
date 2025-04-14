@@ -5,16 +5,18 @@ public class CameraTrack : MonoBehaviour
     [Header("主物体移动参数")]
     public float zDistance = 5f;
     public float yDistance = 3f;
-    public float speed = 2f;
+    public float zSpeed = 2f;  // Z轴移动速度
+    public float ySpeed = 4f;  // Y轴移动速度
     public float pauseTimeAfterZ = 1f;
 
     [Header("协同物体参数")]
-    public Transform secondaryObject; // 协同移动的物体
+    public Transform secondaryObject;
     public float secondaryYDistance = 2f;
-    public float secondarySpeed = 2f;
+    public float secondarySpeed = 4f;
 
-    [Header("触发目标")]
-    public GameObject finalTriggerObject; // 所有移动结束后触发的物体
+    [Header("最终触发设置")]
+    public GameObject finalTriggerObject;
+    public float finalDelay = 1f;
 
     private Vector3 startPosition;
     private bool movingZ = true;
@@ -25,13 +27,20 @@ public class CameraTrack : MonoBehaviour
     private bool secondaryStarted = false;
     private bool secondaryDone = false;
     private bool mainDone = false;
+    private bool finalTriggered = false;
 
     void Start()
     {
         startPosition = transform.position;
+
         if (secondaryObject != null)
         {
             secondaryStartPos = secondaryObject.position;
+        }
+
+        if (finalTriggerObject != null)
+        {
+            finalTriggerObject.SetActive(false); // 确保初始为不激活
         }
     }
 
@@ -40,20 +49,20 @@ public class CameraTrack : MonoBehaviour
         if (movingZ)
         {
             Vector3 target = startPosition + new Vector3(0, 0, zDistance);
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, zSpeed * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, target) < 0.01f)
             {
                 movingZ = false;
                 waiting = true;
-                Invoke(nameof(StartYMovement), pauseTimeAfterZ); // 延迟调用
+                Invoke(nameof(StartYMovement), pauseTimeAfterZ);
             }
         }
 
         if (movingY)
         {
             Vector3 target = startPosition + new Vector3(0, yDistance, zDistance);
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, ySpeed * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, target) < 0.01f)
             {
@@ -88,15 +97,22 @@ public class CameraTrack : MonoBehaviour
 
     void TryTriggerFinal()
     {
+        if (finalTriggered) return;
+
         if (mainDone && (secondaryObject == null || secondaryDone))
         {
-            if (finalTriggerObject != null)
-            {
-                finalTriggerObject.SetActive(true);
-                // 你可以改成触发动画、粒子、调用方法等
-            }
-
-            enabled = false; // 停止更新
+            finalTriggered = true;
+            Invoke(nameof(ActivateFinalObject), finalDelay);
         }
+    }
+
+    void ActivateFinalObject()
+    {
+        if (finalTriggerObject != null)
+        {
+            finalTriggerObject.SetActive(true);
+        }
+
+        enabled = false;
     }
 }
