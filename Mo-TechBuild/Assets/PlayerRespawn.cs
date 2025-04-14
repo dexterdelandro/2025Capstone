@@ -6,6 +6,10 @@ public class PlayerRespawn : MonoBehaviour
     public Transform defaultSpawnPoint; // 默认生成点
     public GameObject player;
 
+    public GameObject waterUi;
+
+    public bool isDead= false;
+
     void Start()
     {
 
@@ -15,22 +19,30 @@ public class PlayerRespawn : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        if(isDead == true && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.R)))
+        {
+            isDead= false;
+             Manager.Instance.restart();
+             
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         
         if (other.CompareTag("Water"))
         {
             Debug.Log("touch water");
-            
-            Manager.Instance.restart();
-            
+
+            Manager.Instance.PauseControls();
+
+            waterUi.gameObject.SetActive(true);
+            isDead=true;
+
           
         }
     }
 
-    // public void SetCheckpoint(Vector3 newCheckpoint)
-    // {
-    //     lastCheckpoint = newCheckpoint;
-    // }
-
+    
 }

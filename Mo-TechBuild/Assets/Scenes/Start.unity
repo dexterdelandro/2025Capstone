@@ -18524,7 +18524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2850294805874517274}
   m_Layer: 0
-  m_Name: w34464
+  m_Name: PaintBrush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

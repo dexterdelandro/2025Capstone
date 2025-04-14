@@ -15,10 +15,8 @@ public class CompanionFollow : MonoBehaviour
 
     public float collectionTime;
 
-    public RectTransform centerdot;
-    public Camera mainCamera;
-
     private Queue<string> previousComplaints = new Queue<string>();
+
 
     public LayerMask spriteLayer;
     enum CurrentAction{
@@ -43,6 +41,9 @@ public class CompanionFollow : MonoBehaviour
     private Canvas dialogueUI;
 
     [SerializeField]
+    private Canvas countUI;
+
+    [SerializeField]
     private TMP_Text complaintText;
     private float time;
 
@@ -51,6 +52,7 @@ public class CompanionFollow : MonoBehaviour
     private float movementSpeed;
 
     public float StartingMoveSpeed;
+    public float minMoveSpeed;
     public float minStartDistance; //the distance away from player to START following
 
     public float minEndDistance;
@@ -121,6 +123,8 @@ public class CompanionFollow : MonoBehaviour
 
     [SerializeField]
     private float avgInkCounter;
+
+    public GameObject Canvas_Tutorial_Skill;
     NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
@@ -147,7 +151,7 @@ public class CompanionFollow : MonoBehaviour
         }
         
         if(currentInkLevel>_softCap){
-            movementSpeed = (1.0f-(num*0.1f))*StartingMoveSpeed;
+            movementSpeed = Mathf.Max(minMoveSpeed,(1.0f-(num*0.1f))*StartingMoveSpeed);
         }else{
             movementSpeed = StartingMoveSpeed;
         }
@@ -155,6 +159,8 @@ public class CompanionFollow : MonoBehaviour
 
     public void StartCompanion(){
         currentAction = CurrentAction.Idle;
+        countUI.gameObject.SetActive(true);
+        Canvas_Tutorial_Skill.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

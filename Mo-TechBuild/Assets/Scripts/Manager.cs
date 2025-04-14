@@ -1,6 +1,8 @@
+using StarterAssets;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 public class Manager : MonoBehaviour
 {
     private static Manager _instance;
@@ -14,6 +16,11 @@ public class Manager : MonoBehaviour
     public Canvas GameUI;
 
     public float startTime;
+
+    public ThirdPersonController playerController;
+
+    public bool didFinishTutorial = false;
+
 
     public enum GameState{
         Playing,
@@ -48,6 +55,11 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+                restart();
+            }
         switch(gamestate){
             case GameState.Playing:
                 if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton9))
@@ -75,8 +87,9 @@ public class Manager : MonoBehaviour
     
 
     public void EnablePause(){
+        PauseControls();
         gamestate = GameState.Pause;
-        Time.timeScale = 0;
+
         //Cursor.lockState = CursorLockMode.None;
         GameUI.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(true);
@@ -85,14 +98,45 @@ public class Manager : MonoBehaviour
     public void ResumePlay(){
         pauseCanvas.gameObject.SetActive(false);
         gamestate = GameState.Playing;
-        Time.timeScale = 1;
        // Cursor.lockState = CursorLockMode.Locked;
-        GameUI.gameObject.SetActive(true);
+        if(didFinishTutorial)GameUI.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
+        ResumeControls();
     }
 
     public void restart()
     {
         SceneManager.LoadScene("Level GDC_Audio");
+        //AudioManager.instance.PlayOneShot(startSong, this.transform.position);
+        didFinishTutorial = false;
+    }
+
+    public void TutorialEnd(){
+        didFinishTutorial = true;
+        ResumeControls();
+    }
+
+    public void PauseControls(){
+        if(playerController==null){
+            playerController = FindAnyObjectByType<ThirdPersonController>();
+        }
+
+        if(playerController){
+            playerController.LockCameraPosition = true;
+            Time.timeScale = 0;
+        }
+
+
+    }
+
+    public void ResumeControls(){
+        if(playerController==null){
+            playerController = FindAnyObjectByType<ThirdPersonController>();
+        }
+
+        if(playerController){
+            playerController.LockCameraPosition = false;
+            Time.timeScale = 1;
+        }
     }
 }
