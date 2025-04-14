@@ -132,6 +132,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 341
+--- !u!114 &-7598177911525255562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CeremonyMusic/EndLoopPhase
+  m_EditorClassIdentifier: 
+  Name: EndLoopPhase
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 371775957
+    data2: 3164498834
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-7234582499714248864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +210,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 15169
+--- !u!114 &-6681220019499052027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CaveMusic/IntroIntensity
+  m_EditorClassIdentifier: 
+  Name: IntroIntensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4229544654
+    data2: 1129795667
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6540729300742256243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +451,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 19300
+--- !u!114 &-1785599455821250820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CaveMusic/IntroDistance
+  m_EditorClassIdentifier: 
+  Name: IntroDistance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2306471717
+    data2: 2136281194
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-1360634615404543656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,16 +548,25 @@ MonoBehaviour:
   - {fileID: -7189691184964284299}
   - {fileID: -7234582499714248864}
   - {fileID: 8839649967036193544}
+  - {fileID: 5079779589101452402}
+  - {fileID: 6755316927671570247}
+  - {fileID: 6751860635318729858}
+  - {fileID: 3513835018021668261}
   EditorParameters:
   - {fileID: -9223296746091124392}
   - {fileID: 7048371391604433943}
   - {fileID: -7832172223804989982}
   - {fileID: 7876508242051133246}
+  - {fileID: 4199080739166611881}
+  - {fileID: 2813866781102294502}
+  - {fileID: 1202877397778867023}
+  - {fileID: 4385448267314424381}
+  - {fileID: 4451427673865251063}
   MasterBanks:
   - {fileID: 677030169936306072}
   StringsBanks:
   - {fileID: 375376122715364432}
-  cacheTime: 638778338111170155
+  cacheTime: 638802118208504020
   cacheVersion: 131616
 --- !u!114 &268166085548488349
 MonoBehaviour:
@@ -529,10 +610,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638778338111170155
+  lastModified: 638802118208504020
   FileSizes:
   - Name: 
-    Value: 2416
+    Value: 2938
   Exists: 1
 --- !u!114 &677030169936306072
 MonoBehaviour:
@@ -549,8 +630,56 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638778338111144825
+  lastModified: 638802118208474123
   FileSizes: []
+  Exists: 1
+--- !u!114 &1157402150556086577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CaveMusic/CaveMusicState
+  m_EditorClassIdentifier: 
+  Name: CaveMusicState
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 3706509893
+    data2: 3570608430
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1202877397778867023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/IntroIntensity
+  m_EditorClassIdentifier: 
+  Name: IntroIntensity
+  StudioPath: parameter:/IntroIntensity
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4229544654
+    data2: 1129795667
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &1517301360198671603
 MonoBehaviour:
@@ -632,6 +761,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2813866781102294502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/IntroDistance
+  m_EditorClassIdentifier: 
+  Name: IntroDistance
+  StudioPath: parameter:/IntroDistance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2306471717
+    data2: 2136281194
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &2934373938664899967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +894,136 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 144935
+--- !u!114 &3513835018021668261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CeremonyMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CeremonyMusic
+  Guid:
+    Data1: 526028395
+    Data2: 1331823782
+    Data3: -844453238
+    Data4: -856624293
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7598177911525255562}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66857
+--- !u!114 &4199080739166611881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CaveMusicState
+  m_EditorClassIdentifier: 
+  Name: CaveMusicState
+  StudioPath: parameter:/CaveMusicState
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 3706509893
+    data2: 3570608430
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4385448267314424381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VillageMusicOn
+  m_EditorClassIdentifier: 
+  Name: VillageMusicOn
+  StudioPath: parameter:/VillageMusicOn
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1357570107
+    data2: 3248381906
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4451427673865251063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndLoopPhase
+  m_EditorClassIdentifier: 
+  Name: EndLoopPhase
+  StudioPath: parameter:/EndLoopPhase
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 371775957
+    data2: 3164498834
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5079779589101452402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CaveMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CaveMusic
+  Guid:
+    Data1: -485558011
+    Data2: 1137744623
+    Data3: 70422717
+    Data4: -2054825367
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1157402150556086577}
+  - {fileID: -1785599455821250820}
+  - {fileID: -6681220019499052027}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6428
 --- !u!114 &5631494796367681817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +1133,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &6099772765261288069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShowcaseVillage/VillageReverb
+  m_EditorClassIdentifier: 
+  Name: VillageReverb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1849192803
+    data2: 325230687
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6270669559092071254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,6 +1184,62 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &6751860635318729858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ShowcaseVillage
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ShowcaseVillage
+  Guid:
+    Data1: 641816495
+    Data2: 1178219495
+    Data3: 1401631134
+    Data4: -1397376442
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9089486672625731651}
+  - {fileID: 6099772765261288069}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66857
+--- !u!114 &6755316927671570247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CaveReveal
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CaveReveal
+  Guid:
+    Data1: 1584685048
+    Data2: 1207739185
+    Data3: 1423125421
+    Data4: -2043675604
+  Banks:
+  - {fileID: 677030169936306072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20571
 --- !u!114 &6941212406773584059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,3 +1500,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &9089486672625731651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShowcaseVillage/VillageMusicOn
+  m_EditorClassIdentifier: 
+  Name: VillageMusicOn
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1357570107
+    data2: 3248381906
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
