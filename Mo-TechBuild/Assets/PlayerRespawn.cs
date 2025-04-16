@@ -21,12 +21,12 @@ public class PlayerRespawn : MonoBehaviour
 
     void Update()
     {
-        if(isDead == true && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.R)))
-        {
-            isDead= false;
-             Manager.Instance.restart();
+        //if(isDead == true && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.R)))
+        //{
+            //isDead= false;
+             //Manager.Instance.restart();
              
-        }
+        //}
     }
     void OnTriggerEnter(Collider other)
     {
