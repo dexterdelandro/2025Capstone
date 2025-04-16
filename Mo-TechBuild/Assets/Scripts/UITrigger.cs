@@ -34,6 +34,7 @@ public class UITrigger : MonoBehaviour
             if (( Input.GetKeyDown(toggleKey)||Input.GetKeyDown(openButton) ) && !isUIVisible)
             {
                 Debug.Log("Opening UI");
+                Manager.Instance.UpdateSavedLocation();
                 ShowUI();
             }
             else if (( Input.GetKeyDown(toggleKey)||Input.GetKeyDown(closeButton)) && isUIVisible)
@@ -73,7 +74,11 @@ public class UITrigger : MonoBehaviour
         {
             Debug.Log("Player Entered Trigger Zone");
             isPlayerInside = true;
-        }
+        }else if(other.CompareTag("FirePS")){
+             GetComponentInChildren<Light>().enabled =true;
+             Manager.Instance.UpdateSavedLocation();
+             ShowUI();
+         }
     }
 
     // 离开触发区域

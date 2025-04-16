@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using UnityEngine.AI;
 public class Manager : MonoBehaviour
 {
     private static Manager _instance;
@@ -20,6 +21,16 @@ public class Manager : MonoBehaviour
     public ThirdPersonController playerController;
 
     public bool didFinishTutorial = false;
+
+    public GameObject player;
+ 
+     public CompanionFollow companion;
+      
+     [SerializeField]
+     private Vector3 savedPlayerLocation;
+ 
+     [SerializeField]
+     private Vector3 savedCompanionLocation;
 
 
     public enum GameState{
@@ -139,4 +150,31 @@ public class Manager : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void PlayerDied(){
+         if(player==null)return;
+         
+         player.GetComponent<CharacterController>().enabled = false;
+         player.transform.position = savedPlayerLocation;
+         player.GetComponent<CharacterController>().enabled = true;
+ 
+         companion.GetComponent<NavMeshAgent>().isStopped = true;
+         companion.transform.position = savedCompanionLocation;
+         companion.GetComponent<NavMeshAgent>().isStopped = false;
+
+        PauseControls();
+
+         //companion.StartCompanion();
+ 
+         //EnablePause();
+     }
+ 
+     public GameObject GetPlayer(){
+         return player;
+     }
+ 
+     public void UpdateSavedLocation(){
+         savedPlayerLocation = player.transform.position;
+         savedCompanionLocation = companion.transform.position;
+     }
 }

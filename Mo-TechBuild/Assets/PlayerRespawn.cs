@@ -35,7 +35,7 @@ public class PlayerRespawn : MonoBehaviour
         {
             Debug.Log("touch water");
 
-            Manager.Instance.PauseControls();
+            Manager.Instance.PlayerDied();
 
             waterUi.gameObject.SetActive(true);
             isDead=true;
