@@ -158,6 +158,8 @@ namespace StarterAssets
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
 
+            Manager.Instance.UpdateSavedLocation();
+
             Time.timeScale = 0;
             LockCameraPosition = true;
         }

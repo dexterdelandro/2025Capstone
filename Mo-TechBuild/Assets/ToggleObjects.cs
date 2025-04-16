@@ -4,6 +4,8 @@ public class ToggleObjects : MonoBehaviour
 {
     public GameObject objectToDisable; // 需要关闭的对象
     public GameObject objectToEnable;  // 需要开启的对象
+
+    public bool resumePlay;
     void Update()
     {
         // 检测是否按下了手柄的X键 (Xbox手柄通常是 "joystick button 2")
@@ -19,6 +21,9 @@ public class ToggleObjects : MonoBehaviour
         if (objectToDisable != null)
         {
             objectToDisable.SetActive(false);
+            if(resumePlay){
+                Manager.Instance.ResumeControls();
+            }
         }
 
         if (objectToEnable != null)
