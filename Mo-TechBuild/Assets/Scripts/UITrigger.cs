@@ -14,6 +14,8 @@ public class UITrigger : MonoBehaviour
     private bool isPlayerInside = false; // 是否在触发区域内
     private bool isUIVisible = false; // UI 是否可见
 
+    public Light light_;
+
     public CompanionFollow companion;
 
     void Start()
@@ -34,6 +36,7 @@ public class UITrigger : MonoBehaviour
             if (( Input.GetKeyDown(toggleKey)||Input.GetKeyDown(openButton) ) && !isUIVisible)
             {
                 Debug.Log("Opening UI");
+                Manager.Instance.UpdateSavedLocation();
                 ShowUI();
             }
             else if (( Input.GetKeyDown(toggleKey)||Input.GetKeyDown(closeButton)) && isUIVisible)
@@ -73,7 +76,11 @@ public class UITrigger : MonoBehaviour
         {
             Debug.Log("Player Entered Trigger Zone");
             isPlayerInside = true;
-        }
+        }else if(other.CompareTag("FirePS")){
+             //light_.enabled =true;
+             Manager.Instance.UpdateSavedLocation();
+             ShowUI();
+         }
     }
 
     // 离开触发区域
