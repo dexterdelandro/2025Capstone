@@ -7,6 +7,7 @@ public class ObjectTransparency : MonoBehaviour
 {
     public float fadeDuration = 2f; // Time taken to fully appear
     public float activationRange = 5f; // Range within which object appears
+    public ItemCollector itemCollector;
     private Material material;
     private Color originalColor;
     private float transparency = 0f;
@@ -18,6 +19,11 @@ public class ObjectTransparency : MonoBehaviour
 
     void Start()
     {
+        itemCollector = FindAnyObjectByType<ItemCollector>();
+        if (itemCollector == null)
+        {
+            Debug.LogError("Can not activate the bridge.");
+        }
         //blocker = GetComponentInChildren<NavMeshObstacle>();
         // Get the material of the object
         material = GetComponent<Renderer>().material;
@@ -43,10 +49,11 @@ public class ObjectTransparency : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) <= activationRange)
         {
             // Check for 'P' key press
-            if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0)) && !isFading)
+            if (itemCollector != null && Input.GetKeyDown(KeyCode.JoystickButton0) && !isFading)
             {
                 Debug.Log("WOrks");
                 StartCoroutine(FadeIn());
+                itemCollector.UseSpirit();
             }
         }
     }
@@ -54,6 +61,7 @@ public class ObjectTransparency : MonoBehaviour
     private IEnumerator FadeIn()
     {
         isFading = true;
+        
         float elapsedTime = 0f;
 
         while (elapsedTime < fadeDuration)
