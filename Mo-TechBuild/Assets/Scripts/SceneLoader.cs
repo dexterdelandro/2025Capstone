@@ -15,14 +15,14 @@ public class SceneLoader : MonoBehaviour
         // 检测手柄的 X 按钮是否被按下
         if (Input.GetKeyDown(KeyCode.E)||(Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
         {
-            //StartCoroutine(LoadSceneAsync("Level GDC_Audio"));
+            StartCoroutine(LoadSceneAsync("Level GDC_Audio"));
             
         }
     }
 
     public void jump()
     {
-        //StartCoroutine(LoadSceneAsync("Level GDC_Audio"));
+        StartCoroutine(LoadSceneAsync("Level GDC_Audio"));
     }
 
     IEnumerator LoadSceneAsync(string sceneName)
